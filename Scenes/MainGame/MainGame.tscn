@@ -1,6 +1,8 @@
-[gd_scene load_steps=5 format=3 uid="uid://cs5bs4pra8r1u"]
+[gd_scene load_steps=7 format=3 uid="uid://cs5bs4pra8r1u"]
 
+[ext_resource type="Script" uid="uid://c17mpjq30ylnd" path="res://Scenes/MainGame/main_game.gd" id="1_adqn2"]
 [ext_resource type="PackedScene" uid="uid://bu3p0gem72gkj" path="res://Scenes/GameField/GameField.tscn" id="1_pemxr"]
+[ext_resource type="Resource" uid="uid://cj63dpgjbxixd" path="res://Dialogue/intro.dialogue" id="2_a8if6"]
 [ext_resource type="PackedScene" uid="uid://mfaag4dkpa2x" path="res://Scenes/UI/UI.tscn" id="2_b60ro"]
 [ext_resource type="PackedScene" uid="uid://bhdqb350icnjw" path="res://Scenes/PauseMenu/PauseMenu.tscn" id="5_fwyhx"]
 [ext_resource type="Script" uid="uid://l6nqv0wdsrj0" path="res://Scenes/GameField/camera_2d.gd" id="5_lqj6m"]
@@ -12,6 +14,8 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_adqn2")
+dialogue_resource = ExtResource("2_a8if6")
 
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(960, 540)
