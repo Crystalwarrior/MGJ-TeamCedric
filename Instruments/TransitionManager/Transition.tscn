@@ -54,16 +54,6 @@ anchor_bottom = 1.0
 mouse_filter = 2
 color = Color(0.0470588, 0.0470588, 0.0470588, 1)
 
-[node name="Loading" type="Label" parent="Dissolve"]
-modulate = Color(1, 1, 1, 0.670588)
-layout_mode = 0
-offset_left = 1824.0
-offset_top = 1039.0
-offset_right = 1899.0
-offset_bottom = 1062.0
-text = "Loading..."
-horizontal_alignment = 1
-
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {
 &"": SubResource("AnimationLibrary_o8r4q")
