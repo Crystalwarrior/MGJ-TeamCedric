@@ -4,7 +4,7 @@
 
 extends AudioStreamPlayer
 
-var mainMusic = preload("res://music/Main Theme.mp3")
+var mainMusic = preload("uid://cjbueonwdtdtu")
 
 const FADE_TIME = 0.5
 

@@ -14,10 +14,11 @@ warnings/check_invalid_track_paths=false
 
 [application]
 
-config/name="Gamejam: Nozomu template"
-config/version="1.0"
+config/name="MGJ-TeamCedric"
+config/version="0.1"
 run/main_scene="uid://dg0io0m1wcmd7"
 config/features=PackedStringArray("4.4", "GL Compatibility")
+boot_splash/fullsize=false
 boot_splash/image="res://Splash screen.png"
 config/icon="res://icon.png"
 
