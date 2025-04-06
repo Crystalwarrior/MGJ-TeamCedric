@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://w48uhxhdhlh8"
-path="res://.godot/imported/fox_bark1.png-012552b02acb49e5273b637e9bf9004e.ctex"
+uid="uid://c2n44t1dpgef4"
+path="res://.godot/imported/Map.png-172599ff715bdb6d35e083119dcf2e7d.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://images/fox/fox_bark1.png"
-dest_files=["res://.godot/imported/fox_bark1.png-012552b02acb49e5273b637e9bf9004e.ctex"]
+source_file="res://images/Map.png"
+dest_files=["res://.godot/imported/Map.png-172599ff715bdb6d35e083119dcf2e7d.ctex"]
 
 [params]
 
