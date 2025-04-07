@@ -20,4 +20,4 @@ func _on_start_button_pressed():
 	AudioManager.Music.fade_in()
 	AudioManager.Music.play_main_theme()
 	
-	TransitionManager.change_scene("res://Scenes/MainGame/MainGame.tscn")
+	TransitionManager.change_scene("res://Scenes/Game/Game.tscn")

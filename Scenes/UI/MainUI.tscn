@@ -1,0 +1,126 @@
+[gd_scene load_steps=8 format=3 uid="uid://mfaag4dkpa2x"]
+
+[ext_resource type="Theme" uid="uid://dhvsei0a7jp3j" path="res://GlobalTheme.tres" id="1_mbh6k"]
+[ext_resource type="Script" uid="uid://ba25iuj4n0qke" path="res://Scenes/UI/MainUI.gd" id="2_b0ijr"]
+[ext_resource type="Texture2D" uid="uid://ck2cp0d7bxquw" path="res://images/interface/pause.png" id="3_akgwn"]
+[ext_resource type="PackedScene" uid="uid://sj818y0euhc0" path="res://Scenes/UI/SlidePanel.tscn" id="4_upwrp"]
+[ext_resource type="PackedScene" uid="uid://bhdqb350icnjw" path="res://Scenes/UI/PauseMenu/PauseMenu.tscn" id="4_yftfo"]
+[ext_resource type="PackedScene" uid="uid://basvcdv3kb3f8" path="res://EvidenceUI.tscn" id="5_1kow2"]
+[ext_resource type="PackedScene" uid="uid://b3kxqgba50xwh" path="res://Scenes/UI/MapUI.tscn" id="5_mxqpb"]
+
+[node name="MainUI" type="Control" groups=["UI"]]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+theme = ExtResource("1_mbh6k")
+script = ExtResource("2_b0ijr")
+
+[node name="PauseMenu" parent="." instance=ExtResource("4_yftfo")]
+visible = false
+layout_mode = 1
+
+[node name="SlidePanel" parent="." instance=ExtResource("4_upwrp")]
+unique_name_in_owner = true
+layout_mode = 1
+
+[node name="ColorRect" type="ColorRect" parent="SlidePanel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(1, 1, 1, 0.796078)
+
+[node name="TabContainer" type="TabContainer" parent="SlidePanel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+current_tab = 0
+
+[node name="Evidence" type="Control" parent="SlidePanel/TabContainer"]
+layout_mode = 2
+metadata/_tab_index = 0
+
+[node name="MarginContainer" type="MarginContainer" parent="SlidePanel/TabContainer/Evidence"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_right = 20
+theme_override_constants/margin_bottom = 20
+
+[node name="EvidenceUI" parent="SlidePanel/TabContainer/Evidence/MarginContainer" instance=ExtResource("5_1kow2")]
+layout_mode = 2
+
+[node name="Profiles" type="Control" parent="SlidePanel/TabContainer"]
+visible = false
+layout_mode = 2
+metadata/_tab_index = 1
+
+[node name="MarginContainer" type="MarginContainer" parent="SlidePanel/TabContainer/Profiles"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_right = 20
+theme_override_constants/margin_bottom = 20
+
+[node name="Map" type="Control" parent="SlidePanel/TabContainer"]
+visible = false
+layout_mode = 2
+metadata/_tab_index = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="SlidePanel/TabContainer/Map"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_right = 20
+theme_override_constants/margin_bottom = 20
+
+[node name="Map" parent="SlidePanel/TabContainer/Map/MarginContainer" instance=ExtResource("5_mxqpb")]
+layout_mode = 2
+
+[node name="PauseButton" type="TextureButton" parent="."]
+unique_name_in_owner = true
+process_mode = 3
+z_index = 5
+layout_mode = 1
+offset_top = 13.0
+offset_right = 104.0
+offset_bottom = 125.0
+mouse_default_cursor_shape = 2
+texture_normal = ExtResource("3_akgwn")
+stretch_mode = 3
+
+[node name="OpenSlideButton" type="Button" parent="."]
+custom_minimum_size = Vector2(200, 0)
+layout_mode = 0
+offset_left = 110.0
+offset_top = 22.0
+offset_right = 270.0
+offset_bottom = 104.0
+text = "Open"
+
+[connection signal="pressed" from="PauseButton" to="." method="_on_pause_button_pressed"]
+[connection signal="pressed" from="OpenSlideButton" to="." method="_on_open_slide_button_pressed"]

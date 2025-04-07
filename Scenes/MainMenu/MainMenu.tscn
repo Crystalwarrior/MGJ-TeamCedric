@@ -1,7 +1,7 @@
 [gd_scene load_steps=10 format=3 uid="uid://dg0io0m1wcmd7"]
 
 [ext_resource type="Theme" uid="uid://dhvsei0a7jp3j" path="res://GlobalTheme.tres" id="1_enjhb"]
-[ext_resource type="Script" uid="uid://lh6xedgmm6cc" path="res://Scenes/MainMenu/main_menu.gd" id="2_wgsk1"]
+[ext_resource type="Script" uid="uid://lh6xedgmm6cc" path="res://Scenes/MainMenu/MainMenu.gd" id="2_wgsk1"]
 [ext_resource type="Texture2D" uid="uid://vvhcuvpe7gwe" path="res://images/interface/postcard.png" id="3_17k7v"]
 [ext_resource type="FontFile" uid="uid://d05yajp3iubii" path="res://fonts/SpaceGrotesk-Bold.ttf" id="4_kpx3y"]
 
@@ -182,6 +182,7 @@ shortcut_in_tooltip = false
 text = "Start"
 
 [node name="LinkButton" type="LinkButton" parent="CardControl/Card"]
+layout_mode = 0
 offset_left = 641.0
 offset_top = 523.0
 offset_right = 1015.0
