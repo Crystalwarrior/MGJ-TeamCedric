@@ -2,8 +2,8 @@
 
 [ext_resource type="Theme" uid="uid://dhvsei0a7jp3j" path="res://GlobalTheme.tres" id="1_enjhb"]
 [ext_resource type="Script" uid="uid://lh6xedgmm6cc" path="res://Scenes/MainMenu/MainMenu.gd" id="2_wgsk1"]
-[ext_resource type="Texture2D" uid="uid://vvhcuvpe7gwe" path="res://images/interface/postcard.png" id="3_17k7v"]
-[ext_resource type="FontFile" uid="uid://d05yajp3iubii" path="res://fonts/SpaceGrotesk-Bold.ttf" id="4_kpx3y"]
+[ext_resource type="Texture2D" uid="uid://vvhcuvpe7gwe" path="res://assets/images/interface/postcard.png" id="3_17k7v"]
+[ext_resource type="FontFile" uid="uid://d05yajp3iubii" path="res://assets/fonts/SpaceGrotesk-Bold.ttf" id="4_kpx3y"]
 
 [sub_resource type="Animation" id="Animation_rhvpn"]
 length = 0.001

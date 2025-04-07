@@ -2,11 +2,11 @@
 
 [ext_resource type="Theme" uid="uid://dhvsei0a7jp3j" path="res://GlobalTheme.tres" id="1_mbh6k"]
 [ext_resource type="Script" uid="uid://ba25iuj4n0qke" path="res://Scenes/UI/MainUI.gd" id="2_b0ijr"]
-[ext_resource type="Texture2D" uid="uid://ck2cp0d7bxquw" path="res://images/interface/pause.png" id="3_akgwn"]
-[ext_resource type="PackedScene" uid="uid://sj818y0euhc0" path="res://Scenes/UI/SlidePanel.tscn" id="4_upwrp"]
+[ext_resource type="Texture2D" uid="uid://ck2cp0d7bxquw" path="res://assets/images/interface/pause.png" id="3_akgwn"]
+[ext_resource type="PackedScene" uid="uid://sj818y0euhc0" path="res://Scenes/UI/SlidePanel/SlidePanel.tscn" id="4_upwrp"]
 [ext_resource type="PackedScene" uid="uid://bhdqb350icnjw" path="res://Scenes/UI/PauseMenu/PauseMenu.tscn" id="4_yftfo"]
-[ext_resource type="PackedScene" uid="uid://basvcdv3kb3f8" path="res://EvidenceUI.tscn" id="5_1kow2"]
-[ext_resource type="PackedScene" uid="uid://b3kxqgba50xwh" path="res://Scenes/UI/MapUI.tscn" id="5_mxqpb"]
+[ext_resource type="PackedScene" uid="uid://basvcdv3kb3f8" path="res://Scenes/UI/Evidence/EvidenceUI.tscn" id="5_1kow2"]
+[ext_resource type="PackedScene" uid="uid://b3kxqgba50xwh" path="res://Scenes/UI/Map/MapUI.tscn" id="5_mxqpb"]
 
 [node name="MainUI" type="Control" groups=["UI"]]
 layout_mode = 3
@@ -122,5 +122,15 @@ offset_right = 270.0
 offset_bottom = 104.0
 text = "Open"
 
+[node name="SpeakButton" type="Button" parent="."]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = 23.0
+offset_top = 140.0
+offset_right = 213.0
+offset_bottom = 222.0
+text = "Speak"
+
 [connection signal="pressed" from="PauseButton" to="." method="_on_pause_button_pressed"]
 [connection signal="pressed" from="OpenSlideButton" to="." method="_on_open_slide_button_pressed"]
+[connection signal="pressed" from="SpeakButton" to="." method="_on_speak_button_pressed"]
