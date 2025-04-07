@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://be0vam8l8vuas"]
+
+[ext_resource type="Script" uid="uid://dpxextr4p4mti" path="res://Global/EvidenceDB/EvidenceDB.gd" id="1_vpr07"]
+
+[node name="EvidenceDb" type="Node"]
+script = ExtResource("1_vpr07")
