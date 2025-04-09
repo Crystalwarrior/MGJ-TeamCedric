@@ -4,32 +4,34 @@
 
 extends AudioStreamPlayer
 
-var mainMusic = preload("uid://cjbueonwdtdtu")
-
 const FADE_TIME = 0.5
 
 var currentSource = null
+
+@export_dir var music_path = "res://"
+
+@onready var animation_player: AnimationPlayer = %AnimationPlayer
 
 func _ready():
 	set_bus('Music')
 
 
 func fade_in(time = FADE_TIME):
-	$'../AnimationPlayer'.set_speed_scale(FADE_TIME/time)
-	$'../AnimationPlayer'.play_backwards('FADE')
+	animation_player.set_speed_scale(FADE_TIME/time)
+	animation_player.play_backwards('FADE')
 	
-	await $'../AnimationPlayer'.animation_finished
-	$'../AnimationPlayer'.set_speed_scale(1)
+	await animation_player.animation_finished
+	animation_player.set_speed_scale(1)
 	
 func fade_out(time = FADE_TIME):
 	$Ambient.stop()
 	if (self.is_playing() == false): return
 	
-	$'../AnimationPlayer'.set_speed_scale(FADE_TIME/time)
-	$'../AnimationPlayer'.play('FADE')
+	animation_player.set_speed_scale(FADE_TIME/time)
+	animation_player.play('FADE')
 	
-	await $'../AnimationPlayer'.animation_finished
-	$'../AnimationPlayer'.set_speed_scale(1)
+	await animation_player.animation_finished
+	animation_player.set_speed_scale(1)
 	
 	
 func _play_source(source):
@@ -59,5 +61,7 @@ func disable_low_pass():
 
 ###############
 
-func play_main_theme():
-	_play_source(mainMusic)
+func play_music(song):
+	if song is String:
+		song = load("%s/%s" % [music_path, song])
+	_play_source(song)

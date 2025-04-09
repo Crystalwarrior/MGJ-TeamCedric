@@ -32,6 +32,10 @@ DialogueManager="*res://addons/dialogue_manager/dialogue_manager.gd"
 SignalBus="*res://Global/SignalBus/SignalBus.tscn"
 EvidenceDB="*res://Global/EvidenceDB/EvidenceDB.tscn"
 
+[dialogue_manager]
+
+runtime/balloon_path="uid://bvwk8b32dem4r"
+
 [display]
 
 window/size/viewport_width=1920
