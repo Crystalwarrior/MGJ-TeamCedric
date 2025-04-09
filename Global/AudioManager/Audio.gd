@@ -1,7 +1,7 @@
 extends Node
 
-@onready var Music = get_node('Music')
-@onready var SFX = get_node('SFX')
+@onready var Music = %Music
+@onready var SFX = %SFX
 
 func _ready():
 	# set nice default volume levels

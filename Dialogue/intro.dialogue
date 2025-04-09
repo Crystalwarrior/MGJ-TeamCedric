@@ -1,9 +1,17 @@
 ~ start
-Computer: Hello Casca, You were brought here to face your trial.
-Computer: My name is Alphonse, and I will be acting as your judge and jury.
-Alphonse: You are accused of murdering Mr. John Doe.
-Casca: But how? 
-Alphonse: You stabbed him with a knife.
-Casca: I meant, how did you came to the conclussion that it was me! I dont remember anything...
-Valentino: I told the team, that writing isnt my forte.
+do AudioManager.Music.play_music("suspense_1.ogg")
+Computer: Hello Alma, you were brought here to face your trial.
+Hart: My name is Hart, and I will be acting as your judge and jury.
+Hart: You are accused of murdering Mr. John Doe.
+Alma: But how? 
+do AudioManager.Music.play_music("suspense_2.ogg")
+Hart: You stabbed him with a knife.
+Alma: Huh?! I... Stabbed him?
+Alma: Wait, that doesn't make any sense!
+Hart: Sure it does! I don't see what's so hard to grasp about it.
+Alma: I don't remember stabbing him! That's gotta count for something...
+Hart: Ah, that's pretty common. You must've blocked out your memories from shock!
+do AudioManager.Music.play_music("suspense_3.ogg")
+Alma: N-No... No way...
+Hart: Sorry, bub, I don't make the rules. Them's the breaks! :(
 => END

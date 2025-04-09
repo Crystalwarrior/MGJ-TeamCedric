@@ -46,18 +46,23 @@ _data = {
 script = ExtResource("1_6gq2y")
 
 [node name="Music" type="AudioStreamPlayer" parent="."]
+unique_name_in_owner = true
 volume_db = -6.0
 script = ExtResource("2_xfday")
+music_path = "res://assets/music"
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Music"]
+unique_name_in_owner = true
+root_node = NodePath("../..")
+libraries = {
+&"": SubResource("AnimationLibrary_d04vj")
+}
 
 [node name="SFX" type="AudioStreamPlayer" parent="."]
+unique_name_in_owner = true
 process_mode = 3
 script = ExtResource("3_4e5ni")
 
 [node name="SFX2" type="AudioStreamPlayer" parent="SFX"]
 
 [node name="SFX3" type="AudioStreamPlayer" parent="SFX"]
-
-[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
-libraries = {
-&"": SubResource("AnimationLibrary_d04vj")
-}
