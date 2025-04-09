@@ -6,8 +6,5 @@ func _input(event):
 		_on_start_button_pressed()
 
 func _on_start_button_pressed():
-	AudioManager.SFX.play_sfx("click")
-	AudioManager.Music.fade_in()
-	AudioManager.Music.play_main_theme()
-	
+	AudioManager.SFX.play_sfx("click")	
 	TransitionManager.change_scene("res://Scenes/Game/Game.tscn")

@@ -1,0 +1,170 @@
+[gd_scene load_steps=8 format=3 uid="uid://bvwk8b32dem4r"]
+
+[ext_resource type="Theme" uid="uid://crejb0tegg817" path="res://assets/ui/themes/dialogue_theme.tres" id="2_1cv74"]
+[ext_resource type="Script" uid="uid://ta2mhfw7gfk2" path="res://Scenes/Dialogue/dialogue_box.gd" id="2_hkmdv"]
+[ext_resource type="PackedScene" uid="uid://ckvgyvclnwggo" path="res://addons/dialogue_manager/dialogue_label.tscn" id="2_is5bl"]
+[ext_resource type="Script" uid="uid://bb52rsfwhkxbn" path="res://addons/dialogue_manager/dialogue_responses_menu.gd" id="3_1cv74"]
+[ext_resource type="PackedScene" uid="uid://clkpg2guqerjf" path="res://Scenes/Dialogue/speak_diamond.tscn" id="3_hkmdv"]
+[ext_resource type="Script" uid="uid://3ugifb47s51" path="res://Scenes/Dialogue/showname_label.gd" id="5_hkmdv"]
+[ext_resource type="PackedScene" uid="uid://dxi2mho8xp77e" path="res://Scenes/Dialogue/next_icon.tscn" id="6_7qr2c"]
+
+[node name="DialogueBox" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("2_1cv74")
+script = ExtResource("2_hkmdv")
+
+[node name="Balloon" type="Control" parent="."]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="ShakeGroup" type="Control" parent="Balloon"]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -1080.0
+grow_horizontal = 2
+grow_vertical = 0
+mouse_filter = 2
+
+[node name="DialogueBoxPanel" type="Panel" parent="Balloon/ShakeGroup"]
+unique_name_in_owner = true
+clip_children = 2
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 21.0
+offset_top = -201.0
+offset_right = -21.0
+grow_horizontal = 2
+grow_vertical = 0
+mouse_filter = 2
+
+[node name="ShownamePanel" type="PanelContainer" parent="Balloon/ShakeGroup"]
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 0.781
+anchor_bottom = 0.781
+offset_left = 21.0
+offset_top = -35.48
+offset_right = 150.0
+offset_bottom = 35.52
+mouse_filter = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="Balloon/ShakeGroup/ShownamePanel"]
+layout_mode = 2
+size_flags_horizontal = 0
+mouse_filter = 2
+theme_override_constants/margin_left = 8
+theme_override_constants/margin_top = 8
+theme_override_constants/margin_right = 32
+theme_override_constants/margin_bottom = 8
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Balloon/ShakeGroup/ShownamePanel/MarginContainer"]
+layout_mode = 2
+mouse_filter = 2
+theme_override_constants/separation = 8
+
+[node name="Control" type="Control" parent="Balloon/ShakeGroup/ShownamePanel/MarginContainer/HBoxContainer"]
+custom_minimum_size = Vector2(55, 55)
+layout_mode = 2
+mouse_filter = 2
+
+[node name="SpeakDiamond" parent="Balloon/ShakeGroup/ShownamePanel/MarginContainer/HBoxContainer/Control" instance=ExtResource("3_hkmdv")]
+unique_name_in_owner = true
+layout_mode = 0
+anchors_preset = 0
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 55.0
+offset_bottom = 55.0
+grow_horizontal = 1
+grow_vertical = 1
+
+[node name="CharacterLabel" type="RichTextLabel" parent="Balloon/ShakeGroup/ShownamePanel/MarginContainer/HBoxContainer"]
+unique_name_in_owner = true
+modulate = Color(1, 1, 1, 0.501961)
+layout_mode = 2
+mouse_filter = 2
+bbcode_enabled = true
+text = "Character"
+fit_content = true
+scroll_active = false
+autowrap_mode = 0
+script = ExtResource("5_hkmdv")
+
+[node name="DialogueMargin" type="MarginContainer" parent="Balloon"]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 21.0
+offset_top = -201.0
+offset_right = -21.0
+grow_horizontal = 2
+grow_vertical = 0
+mouse_filter = 2
+theme_override_constants/margin_left = 70
+theme_override_constants/margin_right = 70
+theme_override_constants/margin_bottom = 0
+
+[node name="DialogueLabel" parent="Balloon/DialogueMargin" instance=ExtResource("2_is5bl")]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_vertical = 3
+mouse_filter = 2
+text = "Dialogue... [b]DIALOGUE[/b][i]gamer[/i] YOU WILL SEE THE ERROR OF YOUR WAYS YOU WEFFIENDISH FIEND Second line YAYHHH SECOND LINE YAP FUCK SHIG HOOOOOOOOOO FEST YAP FEST
+"
+
+[node name="NextIcon" parent="Balloon" instance=ExtResource("6_7qr2c")]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = 1860.0
+offset_top = 1042.0
+offset_right = 1892.0
+offset_bottom = 1074.0
+
+[node name="Responses" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -641.0
+offset_top = -202.0
+offset_bottom = 202.0
+grow_horizontal = 0
+grow_vertical = 2
+
+[node name="ResponsesMenu" type="VBoxContainer" parent="Responses" node_paths=PackedStringArray("response_template")]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_constants/separation = 2
+alignment = 1
+script = ExtResource("3_1cv74")
+response_template = NodePath("ResponseExample")
+
+[node name="ResponseExample" type="Button" parent="Responses/ResponsesMenu"]
+layout_mode = 2
+text = "Response example"
