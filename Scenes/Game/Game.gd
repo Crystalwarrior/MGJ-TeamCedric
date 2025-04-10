@@ -4,17 +4,15 @@ extends Node
 @export var _introDialogue : DialogueResource
 
 @onready var ui = %UI
-
 @onready var _mainUI : MainUI = %MainUI
-
-var _speaked := false # just to test the evidence gather
-
-var _playerState : PlayerState = PlayerState.new()
+@onready var run_title: String = DMSettings.get_user_value("run_title")
+@onready var run_resource: DialogueResource = load(DMSettings.get_user_value("run_resource_path"))
 
 var dialog_balloon
 
-@onready var run_title: String = DMSettings.get_user_value("run_title")
-@onready var run_resource: DialogueResource = load(DMSettings.get_user_value("run_resource_path"))
+var _speaked := false # just to test the evidence gather
+var _playerState : PlayerState = PlayerState.new()
+
 
 func _ready() -> void:
 	_mainUI.speakButtonPressed.connect(_onSpeakButtonPressed)
@@ -46,3 +44,5 @@ func _onDialogueEnded(dialogue: DialogueResource) -> void:
 	var evidence2 = EvidenceDB.getItem(Enums.Evidence.Amnesia)
 	_playerState.addEvidence(evidence1)
 	_playerState.addEvidence(evidence2)
+	SaveLoadManager.data.playerState = _playerState
+	SaveLoadManager.save()
