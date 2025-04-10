@@ -14,25 +14,29 @@ extends Control
 }
 
 var _currentFloorId : int 
+var _currentTimelineId : int
 
 
 func _ready() -> void:
 	for id in _floorById.keys():
-		var floor = _floorById[id] as FloorTexture
-		floor.setOwnerId(id)
-		floor.hide()
+		var floorTexture = _floorById[id] as FloorTexture
+		floorTexture.setOwnerId(id)
+		floorTexture.hide()
 	_currentFloorId = 0
+	_currentTimelineId = 0
 	_floorById.get(0).show()
 
 func setCurrentFloor(id: int) -> void:
-	var targetFloor : FloorTexture = _floorById.get(id)
-	if targetFloor == null:
+	var targetFloorTexture : FloorTexture = _floorById.get(id)
+	if targetFloorTexture == null:
 		push_error("Map Drawing being called to set a floor that doesnt exist with id ", id)
 	_currentFloorId = id
-	for floor in _floorById.values():
-		floor.hide()
-	targetFloor.show()
+	for floorTexture in _floorById.values():
+		floorTexture.hide()
+	targetFloorTexture.show()
+	setCurrentTimeline(_currentTimelineId)
 
 func setCurrentTimeline(id: int) -> void:
-	var floor : FloorTexture = _floorById.get(_currentFloorId) as FloorTexture
-	floor.showIcons(id)
+	_currentTimelineId = id
+	var floorTexture : FloorTexture = _floorById.get(_currentFloorId) as FloorTexture
+	floorTexture.showIcons(id)

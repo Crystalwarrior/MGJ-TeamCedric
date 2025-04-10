@@ -1,8 +1,8 @@
 extends Control
 
 
-func _input(event):
-	if visible and Input.is_action_just_pressed("ui_accept"):
+func _gui_input(event):
+	if event.is_action_just_pressed("ui_accept"):
 		_on_start_button_pressed()
 
 func _on_start_button_pressed():
