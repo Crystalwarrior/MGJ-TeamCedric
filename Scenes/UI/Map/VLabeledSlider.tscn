@@ -1,0 +1,46 @@
+[gd_scene load_steps=2 format=3 uid="uid://cwqruaf6tlm0"]
+
+[ext_resource type="Script" uid="uid://bgpfsh4cj1cif" path="res://Scenes/UI/Map/VLabeledSlider.gd" id="1_50gs2"]
+
+[node name="VLabeledSlider" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_vertical = 3
+script = ExtResource("1_50gs2")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+alignment = 1
+
+[node name="TitleLabel" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+text = "Floors"
+horizontal_alignment = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+alignment = 1
+
+[node name="Slider" type="VSlider" parent="VBoxContainer/HBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 6
+max_value = 3.0
+
+[node name="SliderLabels" type="Control" parent="VBoxContainer/HBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 6
+size_flags_vertical = 3
+
+[connection signal="value_changed" from="VBoxContainer/HBoxContainer/Slider" to="." method="_on_slider_value_changed"]

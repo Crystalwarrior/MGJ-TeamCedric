@@ -21,8 +21,8 @@ func _getTargetWidth() -> float:
 func _animateSlide(isOpening: bool):
 	var targetWidth = _getTargetWidth()
 
-	var target_left = - targetWidth if isOpening else 0
-	var target_right = 0 if isOpening else targetWidth
+	var target_left = - targetWidth if isOpening else 0.0
+	var target_right = 0.0 if isOpening else targetWidth
 
 	var tween: Tween = create_tween()
 	tween.tween_property(self, "offset_left", target_left, 0.4).set_trans(Tween.TRANS_QUAD).set_ease(Tween.EASE_OUT)

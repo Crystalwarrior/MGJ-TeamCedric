@@ -1,0 +1,658 @@
+[gd_scene load_steps=5 format=3 uid="uid://cwqbsll4my27f"]
+
+[ext_resource type="Script" uid="uid://b55twain4ciyy" path="res://Scenes/UI/Map/MapDrawing.gd" id="1_2nril"]
+[ext_resource type="Texture2D" uid="uid://c2n44t1dpgef4" path="res://assets/images/Map.png" id="1_bi3eq"]
+[ext_resource type="PackedScene" uid="uid://chd21gbowwf65" path="res://Scenes/UI/Map/MapIcon.tscn" id="2_1sdr6"]
+[ext_resource type="Script" uid="uid://dvt70scufk20e" path="res://Scenes/UI/Map/FloorTexture.gd" id="3_ql437"]
+
+[node name="MapDrawing" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 2.0
+script = ExtResource("1_2nril")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Control1" type="Control" parent="HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Floor1Texture" type="TextureRect" parent="HBoxContainer"]
+unique_name_in_owner = true
+visible = false
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+texture = ExtResource("1_bi3eq")
+expand_mode = 3
+stretch_mode = 5
+script = ExtResource("3_ql437")
+
+[node name="Timeline1Icons" type="Control" parent="HBoxContainer/Floor1Texture"]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="MapIcon" parent="HBoxContainer/Floor1Texture/Timeline1Icons" instance=ExtResource("2_1sdr6")]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.491001
+anchor_top = 0.42037
+anchor_right = 0.491001
+anchor_bottom = 0.42037
+text = "Someone died here!"
+metadata/_edit_use_anchors_ = true
+
+[node name="MapIcon2" parent="HBoxContainer/Floor1Texture/Timeline1Icons" instance=ExtResource("2_1sdr6")]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.731452
+anchor_top = 0.718518
+anchor_right = 0.731452
+anchor_bottom = 0.718518
+text = "Someone ate a sandwich here!"
+metadata/_edit_use_anchors_ = true
+
+[node name="MapIcon3" parent="HBoxContainer/Floor1Texture/Timeline1Icons" instance=ExtResource("2_1sdr6")]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.685378
+anchor_top = 0.452778
+anchor_right = 0.685378
+anchor_bottom = 0.452778
+text = "Here there was a witness!"
+metadata/_edit_use_anchors_ = true
+
+[node name="Timeline2Icons" type="Control" parent="HBoxContainer/Floor1Texture"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="MapIcon" parent="HBoxContainer/Floor1Texture/Timeline2Icons" instance=ExtResource("2_1sdr6")]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.226053
+anchor_top = 0.55
+anchor_right = 0.226053
+anchor_bottom = 0.55
+metadata/_edit_use_anchors_ = true
+
+[node name="MapIcon2" parent="HBoxContainer/Floor1Texture/Timeline2Icons" instance=ExtResource("2_1sdr6")]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.558652
+anchor_top = 0.839815
+anchor_right = 0.558652
+anchor_bottom = 0.839815
+metadata/_edit_use_anchors_ = true
+
+[node name="MapIcon3" parent="HBoxContainer/Floor1Texture/Timeline2Icons" instance=ExtResource("2_1sdr6")]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.693276
+anchor_top = 0.267593
+anchor_right = 0.693276
+anchor_bottom = 0.267593
+metadata/_edit_use_anchors_ = true
+
+[node name="Timeline3Icons" type="Control" parent="HBoxContainer/Floor1Texture"]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="MapIcon" parent="HBoxContainer/Floor1Texture/Timeline3Icons" instance=ExtResource("2_1sdr6")]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.16414
+anchor_top = 0.142593
+anchor_right = 0.16414
+anchor_bottom = 0.142593
+metadata/_edit_use_anchors_ = true
+
+[node name="MapIcon2" parent="HBoxContainer/Floor1Texture/Timeline3Icons" instance=ExtResource("2_1sdr6")]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.573051
+anchor_top = 0.869444
+anchor_right = 0.573051
+anchor_bottom = 0.869444
+metadata/_edit_use_anchors_ = true
+
+[node name="MapIcon3" parent="HBoxContainer/Floor1Texture/Timeline3Icons" instance=ExtResource("2_1sdr6")]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.685357
+anchor_top = 0.275926
+anchor_right = 0.685357
+anchor_bottom = 0.275926
+metadata/_edit_use_anchors_ = true
+
+[node name="Timeline4Icons" type="Control" parent="HBoxContainer/Floor1Texture"]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="MapIcon" parent="HBoxContainer/Floor1Texture/Timeline4Icons" instance=ExtResource("2_1sdr6")]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.180698
+anchor_top = 0.430556
+anchor_right = 0.180698
+anchor_bottom = 0.430556
+metadata/_edit_use_anchors_ = true
+
+[node name="MapIcon2" parent="HBoxContainer/Floor1Texture/Timeline4Icons" instance=ExtResource("2_1sdr6")]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.507539
+anchor_top = 0.747222
+anchor_right = 0.507539
+anchor_bottom = 0.747222
+metadata/_edit_use_anchors_ = true
+
+[node name="MapIcon3" parent="HBoxContainer/Floor1Texture/Timeline4Icons" instance=ExtResource("2_1sdr6")]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.880454
+anchor_top = 0.3
+anchor_right = 0.880454
+anchor_bottom = 0.3
+metadata/_edit_use_anchors_ = true
+
+[node name="Floor2Texture" type="TextureRect" parent="HBoxContainer"]
+unique_name_in_owner = true
+visible = false
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+texture = ExtResource("1_bi3eq")
+expand_mode = 3
+stretch_mode = 5
+flip_h = true
+script = ExtResource("3_ql437")
+
+[node name="Timeline1Icons" type="Control" parent="HBoxContainer/Floor2Texture"]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="MapIcon" parent="HBoxContainer/Floor2Texture/Timeline1Icons" instance=ExtResource("2_1sdr6")]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.293725
+anchor_top = 0.460185
+anchor_right = 0.293725
+anchor_bottom = 0.460185
+metadata/_edit_use_anchors_ = true
+
+[node name="MapIcon2" parent="HBoxContainer/Floor2Texture/Timeline1Icons" instance=ExtResource("2_1sdr6")]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.400992
+anchor_top = 0.853704
+anchor_right = 0.400992
+anchor_bottom = 0.853704
+metadata/_edit_use_anchors_ = true
+
+[node name="MapIcon3" parent="HBoxContainer/Floor2Texture/Timeline1Icons" instance=ExtResource("2_1sdr6")]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.677438
+anchor_top = 0.159259
+anchor_right = 0.677438
+anchor_bottom = 0.159259
+metadata/_edit_use_anchors_ = true
+
+[node name="Timeline2Icons" type="Control" parent="HBoxContainer/Floor2Texture"]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="MapIcon" parent="HBoxContainer/Floor2Texture/Timeline2Icons" instance=ExtResource("2_1sdr6")]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.190057
+anchor_top = 0.22963
+anchor_right = 0.190057
+anchor_bottom = 0.22963
+metadata/_edit_use_anchors_ = true
+
+[node name="MapIcon2" parent="HBoxContainer/Floor2Texture/Timeline2Icons" instance=ExtResource("2_1sdr6")]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.58313
+anchor_top = 0.862963
+anchor_right = 0.58313
+anchor_bottom = 0.862963
+metadata/_edit_use_anchors_ = true
+
+[node name="MapIcon3" parent="HBoxContainer/Floor2Texture/Timeline2Icons" instance=ExtResource("2_1sdr6")]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.794784
+anchor_top = 0.176852
+anchor_right = 0.794784
+anchor_bottom = 0.176852
+metadata/_edit_use_anchors_ = true
+
+[node name="Timeline3Icons" type="Control" parent="HBoxContainer/Floor2Texture"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="MapIcon" parent="HBoxContainer/Floor2Texture/Timeline3Icons" instance=ExtResource("2_1sdr6")]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.389473
+anchor_top = 0.0888889
+anchor_right = 0.389473
+anchor_bottom = 0.0888889
+metadata/_edit_use_anchors_ = true
+
+[node name="MapIcon2" parent="HBoxContainer/Floor2Texture/Timeline3Icons" instance=ExtResource("2_1sdr6")]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.41179
+anchor_top = 0.849074
+anchor_right = 0.41179
+anchor_bottom = 0.849074
+metadata/_edit_use_anchors_ = true
+
+[node name="MapIcon3" parent="HBoxContainer/Floor2Texture/Timeline3Icons" instance=ExtResource("2_1sdr6")]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.796224
+anchor_top = 0.548148
+anchor_right = 0.796224
+anchor_bottom = 0.548148
+metadata/_edit_use_anchors_ = true
+
+[node name="Timeline4Icons" type="Control" parent="HBoxContainer/Floor2Texture"]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="MapIcon" parent="HBoxContainer/Floor2Texture/Timeline4Icons" instance=ExtResource("2_1sdr6")]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.199416
+anchor_top = 0.42037
+anchor_right = 0.199416
+anchor_bottom = 0.42037
+metadata/_edit_use_anchors_ = true
+
+[node name="MapIcon2" parent="HBoxContainer/Floor2Texture/Timeline4Icons" instance=ExtResource("2_1sdr6")]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.283646
+anchor_top = 0.265741
+anchor_right = 0.283646
+anchor_bottom = 0.265741
+metadata/_edit_use_anchors_ = true
+
+[node name="MapIcon3" parent="HBoxContainer/Floor2Texture/Timeline4Icons" instance=ExtResource("2_1sdr6")]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.770307
+anchor_top = 0.121296
+anchor_right = 0.770307
+anchor_bottom = 0.121296
+metadata/_edit_use_anchors_ = true
+
+[node name="Floor3Texture" type="TextureRect" parent="HBoxContainer"]
+unique_name_in_owner = true
+visible = false
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+texture = ExtResource("1_bi3eq")
+expand_mode = 3
+stretch_mode = 5
+flip_h = true
+flip_v = true
+script = ExtResource("3_ql437")
+
+[node name="Timeline1Icons" type="Control" parent="HBoxContainer/Floor3Texture"]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="MapIcon" parent="HBoxContainer/Floor3Texture/Timeline1Icons" instance=ExtResource("2_1sdr6")]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.149742
+anchor_top = 0.525926
+anchor_right = 0.149742
+anchor_bottom = 0.525926
+metadata/_edit_use_anchors_ = true
+
+[node name="MapIcon2" parent="HBoxContainer/Floor3Texture/Timeline1Icons" instance=ExtResource("2_1sdr6")]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.400992
+anchor_top = 0.123148
+anchor_right = 0.400992
+anchor_bottom = 0.123148
+metadata/_edit_use_anchors_ = true
+
+[node name="MapIcon3" parent="HBoxContainer/Floor3Texture/Timeline1Icons" instance=ExtResource("2_1sdr6")]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.724233
+anchor_top = 0.333333
+anchor_right = 0.724233
+anchor_bottom = 0.333333
+metadata/_edit_use_anchors_ = true
+
+[node name="Timeline2Icons" type="Control" parent="HBoxContainer/Floor3Texture"]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="MapIcon" parent="HBoxContainer/Floor3Texture/Timeline2Icons" instance=ExtResource("2_1sdr6")]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.697596
+anchor_top = 0.825
+anchor_right = 0.697596
+anchor_bottom = 0.825
+metadata/_edit_use_anchors_ = true
+
+[node name="MapIcon2" parent="HBoxContainer/Floor3Texture/Timeline2Icons" instance=ExtResource("2_1sdr6")]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.771747
+anchor_top = 0.835185
+anchor_right = 0.771747
+anchor_bottom = 0.835185
+metadata/_edit_use_anchors_ = true
+
+[node name="MapIcon3" parent="HBoxContainer/Floor3Texture/Timeline2Icons" instance=ExtResource("2_1sdr6")]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.41539
+anchor_top = 0.50463
+anchor_right = 0.41539
+anchor_bottom = 0.50463
+metadata/_edit_use_anchors_ = true
+
+[node name="Timeline3Icons" type="Control" parent="HBoxContainer/Floor3Texture"]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="MapIcon" parent="HBoxContainer/Floor3Texture/Timeline3Icons" instance=ExtResource("2_1sdr6")]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.190057
+anchor_top = 0.503704
+anchor_right = 0.190057
+anchor_bottom = 0.503704
+metadata/_edit_use_anchors_ = true
+
+[node name="MapIcon2" parent="HBoxContainer/Floor3Texture/Timeline3Icons" instance=ExtResource("2_1sdr6")]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.41035
+anchor_top = 0.524074
+anchor_right = 0.41035
+anchor_bottom = 0.524074
+metadata/_edit_use_anchors_ = true
+
+[node name="MapIcon3" parent="HBoxContainer/Floor3Texture/Timeline3Icons" instance=ExtResource("2_1sdr6")]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.714874
+anchor_top = 0.331481
+anchor_right = 0.714874
+anchor_bottom = 0.331481
+metadata/_edit_use_anchors_ = true
+
+[node name="Timeline4Icons" type="Control" parent="HBoxContainer/Floor3Texture"]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="MapIcon" parent="HBoxContainer/Floor3Texture/Timeline4Icons" instance=ExtResource("2_1sdr6")]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.396672
+anchor_top = 0.132407
+anchor_right = 0.396672
+anchor_bottom = 0.132407
+metadata/_edit_use_anchors_ = true
+
+[node name="MapIcon2" parent="HBoxContainer/Floor3Texture/Timeline4Icons" instance=ExtResource("2_1sdr6")]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.291565
+anchor_top = 0.690741
+anchor_right = 0.291565
+anchor_bottom = 0.690741
+metadata/_edit_use_anchors_ = true
+
+[node name="MapIcon3" parent="HBoxContainer/Floor3Texture/Timeline4Icons" instance=ExtResource("2_1sdr6")]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.179258
+anchor_top = 0.516667
+anchor_right = 0.179258
+anchor_bottom = 0.516667
+metadata/_edit_use_anchors_ = true
+
+[node name="Floor4Texture" type="TextureRect" parent="HBoxContainer"]
+unique_name_in_owner = true
+visible = false
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+texture = ExtResource("1_bi3eq")
+expand_mode = 3
+stretch_mode = 5
+flip_v = true
+script = ExtResource("3_ql437")
+
+[node name="Timeline1Icons" type="Control" parent="HBoxContainer/Floor4Texture"]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="MapIcon" parent="HBoxContainer/Floor4Texture/Timeline1Icons" instance=ExtResource("2_1sdr6")]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.558653
+anchor_top = 0.0925926
+anchor_right = 0.558653
+anchor_bottom = 0.0925926
+metadata/_edit_use_anchors_ = true
+
+[node name="MapIcon2" parent="HBoxContainer/Floor4Texture/Timeline1Icons" instance=ExtResource("2_1sdr6")]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.480182
+anchor_top = 0.798148
+anchor_right = 0.480182
+anchor_bottom = 0.798148
+metadata/_edit_use_anchors_ = true
+
+[node name="MapIcon3" parent="HBoxContainer/Floor4Texture/Timeline1Icons" instance=ExtResource("2_1sdr6")]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.239731
+anchor_top = 0.339815
+anchor_right = 0.239731
+anchor_bottom = 0.339815
+metadata/_edit_use_anchors_ = true
+
+[node name="Timeline2Icons" type="Control" parent="HBoxContainer/Floor4Texture"]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="MapIcon" parent="HBoxContainer/Floor4Texture/Timeline2Icons" instance=ExtResource("2_1sdr6")]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.57737
+anchor_top = 0.128704
+anchor_right = 0.57737
+anchor_bottom = 0.128704
+metadata/_edit_use_anchors_ = true
+
+[node name="MapIcon2" parent="HBoxContainer/Floor4Texture/Timeline2Icons" instance=ExtResource("2_1sdr6")]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.483062
+anchor_top = 0.553704
+anchor_right = 0.483062
+anchor_bottom = 0.553704
+metadata/_edit_use_anchors_ = true
+
+[node name="MapIcon3" parent="HBoxContainer/Floor4Texture/Timeline2Icons" instance=ExtResource("2_1sdr6")]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.890532
+anchor_top = 0.256481
+anchor_right = 0.890532
+anchor_bottom = 0.256481
+metadata/_edit_use_anchors_ = true
+
+[node name="Timeline3Icons" type="Control" parent="HBoxContainer/Floor4Texture"]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="MapIcon" parent="HBoxContainer/Floor4Texture/Timeline3Icons" instance=ExtResource("2_1sdr6")]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.25053
+anchor_top = 0.156481
+anchor_right = 0.25053
+anchor_bottom = 0.156481
+metadata/_edit_use_anchors_ = true
+
+[node name="MapIcon2" parent="HBoxContainer/Floor4Texture/Timeline3Icons" instance=ExtResource("2_1sdr6")]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.260608
+anchor_top = 0.267593
+anchor_right = 0.260608
+anchor_bottom = 0.267593
+metadata/_edit_use_anchors_ = true
+
+[node name="MapIcon3" parent="HBoxContainer/Floor4Texture/Timeline3Icons" instance=ExtResource("2_1sdr6")]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.230372
+anchor_top = 0.506481
+anchor_right = 0.230372
+anchor_bottom = 0.506481
+metadata/_edit_use_anchors_ = true
+
+[node name="Timeline4Icons" type="Control" parent="HBoxContainer/Floor4Texture"]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="MapIcon" parent="HBoxContainer/Floor4Texture/Timeline4Icons" instance=ExtResource("2_1sdr6")]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.573051
+anchor_top = 0.114815
+anchor_right = 0.573051
+anchor_bottom = 0.114815
+metadata/_edit_use_anchors_ = true
+
+[node name="MapIcon2" parent="HBoxContainer/Floor4Texture/Timeline4Icons" instance=ExtResource("2_1sdr6")]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.268528
+anchor_top = 0.801852
+anchor_right = 0.268528
+anchor_bottom = 0.801852
+metadata/_edit_use_anchors_ = true
+
+[node name="MapIcon3" parent="HBoxContainer/Floor4Texture/Timeline4Icons" instance=ExtResource("2_1sdr6")]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.696156
+anchor_top = 0.625
+anchor_right = 0.696156
+anchor_bottom = 0.625
+metadata/_edit_use_anchors_ = true
+
+[node name="Control2" type="Control" parent="HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3

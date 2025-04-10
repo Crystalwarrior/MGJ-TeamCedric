@@ -2,11 +2,11 @@ extends Control
 
 var showing: bool = false
 
-func toggle_menu(show: bool):
+func toggle_menu(shouldShow: bool):
 	if $AnimationPlayer.is_playing():
 		return
 		
-	if not show:
+	if not shouldShow:
 		show()
 		#you can also freeze/unfreeze the whole game with get_tree().paused
 		#get_tree().paused = true

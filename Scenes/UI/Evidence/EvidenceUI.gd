@@ -9,14 +9,16 @@ var _evidenceItemUI = preload("res://Scenes/UI/Evidence/EvidenceItemUI.tscn")
 
 func _ready() -> void:
 	SignalBus.playerEvidenceChanged.connect(_onPlayerEvidenceChanged)
+	_applyState(SaveLoadManager.data)
 
+
+func _applyState(data: SaveData) -> void:
+	_populateItems(data.playerState.getEvidenceItems())
 
 func _populateItems(evidenceItems: Array[EvidenceItem]):
-	print("populating UI items! ", evidenceItems.size())
 	for child in rows.get_children():
 		child.queue_free()
 	for i in range(0, evidenceItems.size(), 2):
-		print("adding the item ", evidenceItems[i].title)
 		var hbox = HBoxContainer.new()
 		hbox.size_flags_horizontal = Control.SIZE_EXPAND_FILL
 
