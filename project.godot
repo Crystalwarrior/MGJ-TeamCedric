@@ -35,6 +35,7 @@ EvidenceDB="*res://Global/EvidenceDB/EvidenceDB.tscn"
 [dialogue_manager]
 
 runtime/balloon_path="uid://bvwk8b32dem4r"
+editor/advanced/custom_test_scene_path="uid://dr0wg458h1a2u"
 
 [display]
 

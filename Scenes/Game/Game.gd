@@ -13,9 +13,22 @@ var _playerState : PlayerState = PlayerState.new()
 
 var dialog_balloon
 
+@onready var run_title: String = DMSettings.get_user_value("run_title")
+@onready var run_resource: DialogueResource = load(DMSettings.get_user_value("run_resource_path"))
+
 func _ready() -> void:
 	_mainUI.speakButtonPressed.connect(_onSpeakButtonPressed)
 	DialogueManager.dialogue_ended.connect(_onDialogueEnded)
+
+	# Test run
+	if run_resource:
+		print(run_title)
+		DialogueManager.show_dialogue_balloon(run_resource, run_title if not run_title.is_empty() else run_resource.first_title)
+
+
+func _enter_tree() -> void:
+	DMSettings.set_user_value("is_running_test_scene", false)
+
 
 # just to test the evidence gather
 func _onSpeakButtonPressed() -> void:
