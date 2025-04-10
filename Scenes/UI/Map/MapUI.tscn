@@ -1,11 +1,17 @@
-[gd_scene load_steps=3 format=3 uid="uid://b3kxqgba50xwh"]
+[gd_scene load_steps=5 format=3 uid="uid://b3kxqgba50xwh"]
 
 [ext_resource type="Script" uid="uid://cypq1uq1cr4gs" path="res://Scenes/UI/Map/MapUI.gd" id="1_myuo8"]
-[ext_resource type="Texture2D" uid="uid://c2n44t1dpgef4" path="res://assets/images/Map.png" id="2_q8pau"]
+[ext_resource type="PackedScene" uid="uid://cwqbsll4my27f" path="res://Scenes/UI/Map/MapDrawing.tscn" id="2_lem5d"]
+[ext_resource type="PackedScene" uid="uid://cwqruaf6tlm0" path="res://Scenes/UI/Map/VLabeledSlider.tscn" id="3_lem5d"]
+[ext_resource type="PackedScene" uid="uid://bugev1l72vt0t" path="res://Scenes/UI/Map/HLabeledSlider.tscn" id="4_lem5d"]
 
 [node name="MapUI" type="Control"]
 layout_mode = 3
-anchors_preset = 0
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
 script = ExtResource("1_myuo8")
 
 [node name="VBoxContainer" type="VBoxContainer" parent="."]
@@ -16,37 +22,21 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="TextureRect" type="TextureRect" parent="VBoxContainer"]
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer"]
 layout_mode = 2
 size_flags_vertical = 3
-size_flags_stretch_ratio = 4.0
-texture = ExtResource("2_q8pau")
+size_flags_stretch_ratio = 3.0
 
-[node name="TimeLine" type="Control" parent="VBoxContainer"]
-layout_mode = 2
-size_flags_vertical = 3
-
-[node name="VBoxContainer" type="VBoxContainer" parent="VBoxContainer/TimeLine"]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-
-[node name="Label" type="Label" parent="VBoxContainer/TimeLine/VBoxContainer"]
-layout_mode = 2
-size_flags_vertical = 6
-text = "TimeLine"
-horizontal_alignment = 1
-
-[node name="TimeLineSlider" type="HSlider" parent="VBoxContainer/TimeLine/VBoxContainer"]
+[node name="MapDrawing" parent="VBoxContainer/HBoxContainer" instance=ExtResource("2_lem5d")]
 unique_name_in_owner = true
 layout_mode = 2
-size_flags_vertical = 2
-max_value = 7.0
 
-[node name="TimeLineLabels" type="Control" parent="VBoxContainer/TimeLine/VBoxContainer"]
-unique_name_in_owner = true
+[node name="VLabeledSlider" parent="VBoxContainer/HBoxContainer" instance=ExtResource("3_lem5d")]
 layout_mode = 2
-size_flags_vertical = 3
+size_flags_horizontal = 3
+
+[node name="HLabeledSlider" parent="VBoxContainer" instance=ExtResource("4_lem5d")]
+layout_mode = 2
+
+[connection signal="valueChanged" from="VBoxContainer/HBoxContainer/VLabeledSlider" to="." method="_on_v_labeled_slider_value_changed"]
+[connection signal="valueChanged" from="VBoxContainer/HLabeledSlider" to="." method="_on_h_labeled_slider_value_changed"]

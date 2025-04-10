@@ -1,9 +1,14 @@
 class_name PlayerState
 extends Resource
 
-var evidenceItems : Array[EvidenceItem] = []
+@export var _evidenceItems : Array[EvidenceItem] = []
 
 func addEvidence(evidence: EvidenceItem) -> void:
+	if _evidenceItems.has(evidence):
+		push_warning("Trying to add already existing evidence to the Player State with title: ", evidence.title)
+		return
+	_evidenceItems.append(evidence)
+	SignalBus.playerEvidenceChanged.emit(_evidenceItems)
 
-	evidenceItems.append(evidence)
-	SignalBus.playerEvidenceChanged.emit(evidenceItems)
+func getEvidenceItems() -> Array[EvidenceItem]:
+	return _evidenceItems.duplicate()

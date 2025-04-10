@@ -98,7 +98,7 @@ theme_override_constants/margin_top = 20
 theme_override_constants/margin_right = 20
 theme_override_constants/margin_bottom = 20
 
-[node name="Map" parent="SlidePanel/TabContainer/Map/MarginContainer" instance=ExtResource("5_mxqpb")]
+[node name="MapUI" parent="SlidePanel/TabContainer/Map/MarginContainer" instance=ExtResource("5_mxqpb")]
 layout_mode = 2
 
 [node name="PauseButton" type="TextureButton" parent="."]
