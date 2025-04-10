@@ -1,21 +1,10 @@
-# TODO Move all Slider logic and data into its own Scene
 class_name MapUI
 extends Control
 
-@onready var _timeLineSlider : HSlider = %TimeLineSlider
-@onready var _timeLineLabels := %TimeLineLabels
+@onready var _mapDrawing : MapDrawing = %MapDrawing
 
-const STEPS = 8
+func _on_h_labeled_slider_value_changed(value: float) -> void:
+	_mapDrawing.setCurrentTimeline(int(value))
 
-func _ready():
-	_timeLineSlider.min_value = 0
-	_timeLineSlider.max_value = STEPS -1
-	for i in range(STEPS):
-		var label = Label.new()
-		label.text = str(i) # TODO Replace with actual timestamps
-		label.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
-		var anchor := float(i) / (STEPS -1)
-		label.anchor_left = anchor
-		label.anchor_right = anchor
-
-		_timeLineLabels.add_child(label)
+func _on_v_labeled_slider_value_changed(value: float) -> void:
+	_mapDrawing.setCurrentFloor(int(value))
