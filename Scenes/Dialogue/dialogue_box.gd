@@ -43,16 +43,13 @@ var mutation_cooldown: Timer = Timer.new()
 @onready var balloon: Control = %Balloon
 
 ## The label showing the name of the currently speaking character
-@onready var character_label: RichTextLabel = %CharacterLabel
+@onready var showname: Control = %ShownamePanel
 
 ## The label showing the currently spoken dialogue
 @onready var dialogue_label: DialogueLabel = %DialogueLabel
 
 ## The menu of responses
 @onready var responses_menu: DialogueResponsesMenu = %ResponsesMenu
-
-## The diamond to catch the player's attention to the first line of dialog
-@onready var speak_diamond: Control = %SpeakDiamond
 
 @onready var next_icon: Control = %NextIcon
 
@@ -94,8 +91,7 @@ func apply_dialogue_line() -> void:
 	balloon.focus_mode = Control.FOCUS_ALL
 	balloon.grab_focus()
 
-	character_label.visible = not dialogue_line.character.is_empty()
-	character_label.text = tr(dialogue_line.character, "dialogue")
+	showname.set_showname(tr(dialogue_line.character, "dialogue"))
 
 	dialogue_label.hide()
 	dialogue_label.dialogue_line = dialogue_line
@@ -128,7 +124,7 @@ func apply_dialogue_line() -> void:
 
 ## Go to the next line
 func next(next_id: String) -> void:
-	speak_diamond.spin()
+	showname.speak_diamond.spin()
 	self.dialogue_line = await resource.get_next_dialogue_line(next_id, temporary_game_states)
 
 
