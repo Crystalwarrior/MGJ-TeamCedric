@@ -32,6 +32,7 @@ DialogueManager="*res://addons/dialogue_manager/dialogue_manager.gd"
 SignalBus="*res://Global/SignalBus/SignalBus.tscn"
 EvidenceDB="*res://Global/EvidenceDB/EvidenceDB.tscn"
 SaveLoadManager="*res://Global/SaveLoadManager/SaveLoadManager.gd"
+DialogueStateManager="*res://Global/DialogueStateManager/DialogueStateManager.gd"
 
 [dialogue_manager]
 
