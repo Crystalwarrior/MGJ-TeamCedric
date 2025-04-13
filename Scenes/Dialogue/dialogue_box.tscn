@@ -110,6 +110,8 @@ offset_top = -202.0
 offset_bottom = 202.0
 grow_horizontal = 0
 grow_vertical = 2
+mouse_filter = 0
+mouse_default_cursor_shape = 2
 
 [node name="ResponsesMenu" type="VBoxContainer" parent="Responses" node_paths=PackedStringArray("response_template")]
 unique_name_in_owner = true
@@ -122,3 +124,5 @@ response_template = NodePath("ResponseExample")
 [node name="ResponseExample" type="Button" parent="Responses/ResponsesMenu"]
 layout_mode = 2
 text = "Response example"
+
+[connection signal="response_selected" from="Responses/ResponsesMenu" to="." method="_on_responses_menu_response_selected"]
