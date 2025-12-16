@@ -10,6 +10,7 @@ func loadData() -> void:
 		evidenceItem.icon = load(data["icon"])
 		evidenceItem.title = data["title"]
 		evidenceItem.description = data["description"]
+		evidenceItem.id = key
 		_evinceItems[key] = evidenceItem
 
 func getItem(id: Enums.Evidence) -> EvidenceItem:

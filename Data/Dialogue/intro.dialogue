@@ -1,6 +1,25 @@
 ~ start
 do AudioManager.Music.play_music("suspense_1.ogg")
 Computer: Hello Alma, you were brought here to face your trial.
+Computer: Please let me check your condition. What is your name?
+~ name_question
+- ...
+	???: ...
+	Computer: What's the matter, cat got your tongue?
+	???: ...
+- My name?
+	???: I... What IS my name?
+	Computer: Oh, my! You sure you don't remember?
+	???: It's... Uh... A...
+- Alma
+	=> continue
+- Mrs. Potatoe of the High Mountains
+	Mrs. Potatoe of the High Mountains: Mrs. Potatoe of the High Mountains, at your service!
+	Computer: Don't lie to me, your name is going to break the nameplate.\nThey're expensive to replace!
+Computer: Let's try this again. What is your name?
+=> name_question
+~ continue
+Computer: Great! I see that you are still all there.
 Hart: My name is Hart, and I will be acting as your judge and jury.
 Hart: You are accused of murdering Mr. John Doe.
 Alma: But how? 
@@ -9,9 +28,27 @@ Hart: You stabbed him with a knife.
 Alma: Huh?! I... Stabbed him?
 Alma: Wait, that doesn't make any sense!
 Hart: Sure it does! I don't see what's so hard to grasp about it.
-Alma: I don't remember stabbing him! That's gotta count for something...
+~ evidence_prompt
+do DialogueStateManager.startEvidencePrompt()
+Hart: Lets check, what was the murder weapon?
+- [#presented=Bloody Knife]
+	Alma: I got it! The knife that's coated in blood!
+	Alma: Wait, that was really easy. You literally told me I stabbed him with a knife.
+- [#presented=Amnesia]
+	Hart: No, that doesn't make any sense. Your amnesia doesn't pertain to the question.
+	Alma: But-- I don't remember anything!
+	Hart: Memory is not evidence. I'm asking you if you understand how to operate your evidence screen.
+	Alma: Uh...
+	Hart: Let's try this again.
+	=> evidence_prompt
+- [#presented=Wrong]
+	Hart: Bzzt WRONG!!!
+	=> evidence_prompt
+Hart: See, that wasn't so difficult!
+Alma: But I don't remember stabbing him! That's gotta count for something...
 Hart: Ah, that's pretty common. You must've blocked out your memories from shock!
 do AudioManager.Music.play_music("suspense_3.ogg")
 Alma: N-No... No way...
 Hart: Sorry, bub, I don't make the rules. Them's the breaks! :(
+and then you dieded the end
 => END

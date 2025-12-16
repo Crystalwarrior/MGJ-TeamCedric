@@ -93,31 +93,29 @@ _data = {
 &"slide_out": SubResource("Animation_24hy8")
 }
 
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ndkln"]
-texture = ExtResource("5_a67lc")
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_88uen"]
+texture = ExtResource("6_82e3t")
 
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_go1xn"]
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_vsq5i"]
 texture = ExtResource("5_a67lc")
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_og4nk"]
 texture = ExtResource("5_a67lc")
 
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_vsq5i"]
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_go1xn"]
 texture = ExtResource("5_a67lc")
 
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_88uen"]
-texture = ExtResource("6_82e3t")
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ndkln"]
+texture = ExtResource("5_a67lc")
 
-[node name="PauseMenu" type="Control" groups=["PAUSE_MENU"]]
+[node name="PauseMenu" type="Control"]
 process_mode = 3
-z_index = 10
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-mouse_filter = 2
 theme = ExtResource("1_21hhr")
 script = ExtResource("2_hi1ku")
 
@@ -230,11 +228,11 @@ offset_bottom = 787.0
 mouse_default_cursor_shape = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 48
-theme_override_styles/focus = SubResource("StyleBoxTexture_ndkln")
-theme_override_styles/hover_pressed = SubResource("StyleBoxTexture_go1xn")
-theme_override_styles/hover = SubResource("StyleBoxTexture_og4nk")
-theme_override_styles/pressed = SubResource("StyleBoxTexture_vsq5i")
 theme_override_styles/normal = SubResource("StyleBoxTexture_88uen")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_vsq5i")
+theme_override_styles/hover = SubResource("StyleBoxTexture_og4nk")
+theme_override_styles/hover_pressed = SubResource("StyleBoxTexture_go1xn")
+theme_override_styles/focus = SubResource("StyleBoxTexture_ndkln")
 text = "Resume"
 
 [connection signal="pressed" from="CardControl/Card/ResumeButton" to="." method="_on_button_pressed"]
