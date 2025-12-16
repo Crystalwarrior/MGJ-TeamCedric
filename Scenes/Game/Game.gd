@@ -40,7 +40,7 @@ func _connectSignals() -> void:
 	_mainUI.speakButtonPressed.connect(_onSpeakButtonPressed)
 	SignalBus.evidenceSelected.connect(_onEvidenceSelected)
 
-func _onEvidenceSelected(_id: Enums.Evidence) -> void:
+func _onEvidenceSelected(_data: EvidenceItem) -> void:
 	if not DialogueStateManager.isEvidencePrompt():
 		return
 

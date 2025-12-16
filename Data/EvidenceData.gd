@@ -8,7 +8,7 @@ const Data : Dictionary[Enums.Evidence, Dictionary] = {
 	},
 	Enums.Evidence.Amnesia: {
 		"icon": "res://icon.svg",
-		"title": "Amnsesia",
+		"title": "Amnesia",
 		"description": "I cant seems to recall anything... there must be a reason..."
 	},
 }

@@ -57,6 +57,8 @@ func _ready() -> void:
 	balloon.hide()
 	Engine.get_singleton("DialogueManager").mutated.connect(_on_mutated)
 
+	SignalBus.connect("evidenceSelected", _on_evidence_selected)
+
 	# If the responses menu doesn't have a next action set, use this one
 	if responses_menu.next_action.is_empty():
 		responses_menu.next_action = next_action
@@ -97,7 +99,9 @@ func apply_dialogue_line() -> void:
 	dialogue_label.dialogue_line = dialogue_line
 
 	responses_menu.hide()
-	responses_menu.responses = dialogue_line.responses
+	responses_menu.responses = []
+	if not DialogueStateManager.isEvidencePrompt():
+		responses_menu.responses = dialogue_line.responses
 
 	# Show our balloon
 	balloon.show()
@@ -111,7 +115,9 @@ func apply_dialogue_line() -> void:
 	# Wait for input
 	if dialogue_line.responses.size() > 0:
 		balloon.focus_mode = Control.FOCUS_NONE
-		responses_menu.show()
+		# If this is the kind of response we're thinking of (could be evidence prompt)
+		if responses_menu.responses.size() > 0:
+			responses_menu.show()
 	elif dialogue_line.time != "":
 		var time = dialogue_line.text.length() * 0.02 if dialogue_line.time == "auto" else dialogue_line.time.to_float()
 		await get_tree().create_timer(time).timeout
@@ -174,6 +180,22 @@ func _gui_input(event: InputEvent) -> void:
 
 func _on_responses_menu_response_selected(response: DialogueResponse) -> void:
 	next(response.next_id)
+
+
+func _on_evidence_selected(evidence: EvidenceItem) -> void:
+	if dialogue_line.responses.size() <= 0:
+		return
+	DialogueStateManager.endEvidencePrompt()
+	var other_response: DialogueResponse = null
+	for response in dialogue_line.responses:
+		# Correct response picked
+		if response.get_tag_value("presented").to_lower() == evidence.title.to_lower():
+			next(response.next_id)
+			return
+		if response.get_tag_value("presented").to_lower() == "wrong":
+			other_response = response
+	# Incorrect response
+	next(other_response.next_id)
 
 
 #endregion

@@ -24,4 +24,4 @@ func AddData(data: EvidenceItem) -> void:
 	_data = data
 
 func _onClicked() -> void:
-	SignalBus.evidenceSelected.emit(_data.id)
+	SignalBus.evidenceSelected.emit(_data)

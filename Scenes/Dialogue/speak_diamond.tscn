@@ -1,6 +1,6 @@
 [gd_scene load_steps=6 format=3 uid="uid://clkpg2guqerjf"]
 
-[ext_resource type="Texture2D" uid="uid://jomylmjc5d2m" path="res://assets/ui/diamond.png" id="1_yxu4g"]
+[ext_resource type="Texture2D" uid="uid://jomylmjc5d2m" path="res://assets/images/interface/diamond.png" id="1_yxu4g"]
 [ext_resource type="Script" uid="uid://bpep2dqn5gfv3" path="res://Scenes/Dialogue/speak_diamond.gd" id="2_4b6m7"]
 
 [sub_resource type="Animation" id="Animation_hkmdv"]

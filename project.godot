@@ -17,7 +17,7 @@ warnings/check_invalid_track_paths=false
 config/name="MGJ-TeamCedric"
 config/version="0.1"
 run/main_scene="uid://dw2oxceanrug6"
-config/features=PackedStringArray("4.4", "GL Compatibility")
+config/features=PackedStringArray("4.5", "GL Compatibility")
 boot_splash/bg_color=Color(0.112559, 0.000970244, 0.105922, 1)
 boot_splash/fullsize=false
 boot_splash/image="uid://cqlllfq58qwo6"
@@ -51,9 +51,17 @@ window/stretch/mode="canvas_items"
 
 enabled=PackedStringArray("res://addons/dialogue_manager/plugin.cfg")
 
-[global_group]
+[file_customization]
 
-MAIN_CHARACTER=""
+folder_colors={
+"res://Data/": "yellow",
+"res://Global/": "orange",
+"res://Scenes/": "blue",
+"res://Scripts/": "teal",
+"res://addons/": "gray",
+"res://assets/": "green",
+"res://assets/shaders/": "pink"
+}
 
 [input]
 

@@ -19,10 +19,6 @@ mouse_filter = 2
 theme = ExtResource("1_mbh6k")
 script = ExtResource("2_b0ijr")
 
-[node name="PauseMenu" parent="." instance=ExtResource("4_yftfo")]
-visible = false
-layout_mode = 1
-
 [node name="SlidePanel" parent="." instance=ExtResource("4_upwrp")]
 unique_name_in_owner = true
 layout_mode = 1
@@ -37,6 +33,7 @@ grow_vertical = 2
 color = Color(1, 1, 1, 0.796078)
 
 [node name="TabContainer" type="TabContainer" parent="SlidePanel"]
+unique_name_in_owner = true
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -101,18 +98,6 @@ theme_override_constants/margin_bottom = 20
 [node name="MapUI" parent="SlidePanel/TabContainer/Map/MarginContainer" instance=ExtResource("5_mxqpb")]
 layout_mode = 2
 
-[node name="PauseButton" type="TextureButton" parent="."]
-unique_name_in_owner = true
-process_mode = 3
-z_index = 5
-layout_mode = 1
-offset_top = 13.0
-offset_right = 104.0
-offset_bottom = 125.0
-mouse_default_cursor_shape = 2
-texture_normal = ExtResource("3_akgwn")
-stretch_mode = 3
-
 [node name="OpenSlideButton" type="Button" parent="."]
 custom_minimum_size = Vector2(200, 0)
 layout_mode = 0
@@ -131,6 +116,22 @@ offset_right = 213.0
 offset_bottom = 222.0
 text = "Speak"
 
-[connection signal="pressed" from="PauseButton" to="." method="_on_pause_button_pressed"]
+[node name="PauseMenu" parent="." instance=ExtResource("4_yftfo")]
+unique_name_in_owner = true
+visible = false
+layout_mode = 1
+
+[node name="PauseButton" type="TextureButton" parent="."]
+unique_name_in_owner = true
+process_mode = 3
+layout_mode = 1
+offset_top = 13.0
+offset_right = 104.0
+offset_bottom = 125.0
+mouse_default_cursor_shape = 2
+texture_normal = ExtResource("3_akgwn")
+stretch_mode = 3
+
 [connection signal="pressed" from="OpenSlideButton" to="." method="_on_open_slide_button_pressed"]
 [connection signal="pressed" from="SpeakButton" to="." method="_on_speak_button_pressed"]
+[connection signal="pressed" from="PauseButton" to="." method="_on_pause_button_pressed"]
