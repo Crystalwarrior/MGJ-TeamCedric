@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://bn6rm0sh7ti3m"
+path="res://.godot/imported/Mystery Realization.ogg-9f3df484253b52f17c161976f8dd2bb7.oggvorbisstr"
+
+[deps]
+
+source_file="res://assets/new music/Mystery Realization.ogg"
+dest_files=["res://.godot/imported/Mystery Realization.ogg-9f3df484253b52f17c161976f8dd2bb7.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

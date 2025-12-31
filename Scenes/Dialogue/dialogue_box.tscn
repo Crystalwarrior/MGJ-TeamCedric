@@ -1,10 +1,11 @@
-[gd_scene load_steps=8 format=3 uid="uid://bvwk8b32dem4r"]
+[gd_scene load_steps=9 format=3 uid="uid://bvwk8b32dem4r"]
 
 [ext_resource type="Theme" uid="uid://crejb0tegg817" path="res://assets/themes/dialogue_theme.tres" id="2_1cv74"]
 [ext_resource type="Script" uid="uid://ta2mhfw7gfk2" path="res://Scenes/Dialogue/dialogue_box.gd" id="2_hkmdv"]
 [ext_resource type="PackedScene" uid="uid://ckvgyvclnwggo" path="res://addons/dialogue_manager/dialogue_label.tscn" id="2_is5bl"]
 [ext_resource type="Script" uid="uid://bb52rsfwhkxbn" path="res://addons/dialogue_manager/dialogue_responses_menu.gd" id="3_1cv74"]
 [ext_resource type="PackedScene" uid="uid://chg2wqkkuopcn" path="res://Scenes/Dialogue/showname_panel.tscn" id="3_hkmdv"]
+[ext_resource type="PackedScene" uid="uid://ci7a1ihfpajqq" path="res://Ver Prototype/Judgement Error Textbox/Textbox.tscn" id="3_mf0uh"]
 [ext_resource type="PackedScene" uid="uid://dxi2mho8xp77e" path="res://Scenes/Dialogue/next_icon.tscn" id="6_7qr2c"]
 [ext_resource type="Texture2D" uid="uid://cam6yynwbq1fy" path="res://assets/icons/play.svg" id="6_mf0uh"]
 
@@ -40,8 +41,12 @@ grow_horizontal = 2
 grow_vertical = 0
 mouse_filter = 2
 
+[node name="Textbox" parent="Balloon/ShakeGroup" instance=ExtResource("3_mf0uh")]
+layout_mode = 1
+
 [node name="DialogueBoxPanel" type="Panel" parent="Balloon/ShakeGroup"]
 unique_name_in_owner = true
+visible = false
 clip_children = 2
 layout_mode = 1
 anchors_preset = -1
@@ -61,10 +66,10 @@ layout_mode = 1
 anchors_preset = 2
 anchor_top = 1.0
 anchor_bottom = 1.0
-offset_left = 21.0
-offset_top = -272.0
-offset_right = 314.0
-offset_bottom = -201.0
+offset_left = 260.0
+offset_top = -352.0
+offset_right = 553.0
+offset_bottom = -281.0
 grow_vertical = 0
 
 [node name="DialogueMargin" type="MarginContainer" parent="Balloon"]
@@ -73,9 +78,10 @@ anchors_preset = 12
 anchor_top = 1.0
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = 21.0
-offset_top = -201.0
-offset_right = -21.0
+offset_left = 262.0
+offset_top = -272.0
+offset_right = -313.0
+offset_bottom = -92.0
 grow_horizontal = 2
 grow_vertical = 0
 mouse_filter = 2
@@ -100,13 +106,16 @@ anchor_left = 1.0
 anchor_top = 1.0
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = -60.0
-offset_top = -38.0
-offset_right = -28.0
-offset_bottom = -6.0
+offset_left = -309.0
+offset_top = -137.0
+offset_right = -277.0
+offset_bottom = -105.0
+grow_horizontal = 0
+grow_vertical = 0
 texture = ExtResource("6_mf0uh")
 
 [node name="Responses" type="MarginContainer" parent="."]
+visible = false
 layout_mode = 1
 anchors_preset = 6
 anchor_left = 1.0

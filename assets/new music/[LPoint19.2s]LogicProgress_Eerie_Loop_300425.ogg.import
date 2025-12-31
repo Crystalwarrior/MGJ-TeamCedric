@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://b0qphseb8y6k3"
+path="res://.godot/imported/[LPoint19.2s]LogicProgress_Eerie_Loop_300425.ogg-9d9361dbf76120deb29a4edba2ee0fbe.oggvorbisstr"
+
+[deps]
+
+source_file="res://assets/new music/[LPoint19.2s]LogicProgress_Eerie_Loop_300425.ogg"
+dest_files=["res://.godot/imported/[LPoint19.2s]LogicProgress_Eerie_Loop_300425.ogg-9d9361dbf76120deb29a4edba2ee0fbe.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

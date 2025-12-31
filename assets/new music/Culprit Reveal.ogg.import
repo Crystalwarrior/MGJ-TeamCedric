@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://buu24caj2tl6s"
+path="res://.godot/imported/Culprit Reveal.ogg-3ee29708934d330422ea9dbf2d2bb853.oggvorbisstr"
+
+[deps]
+
+source_file="res://assets/new music/Culprit Reveal.ogg"
+dest_files=["res://.godot/imported/Culprit Reveal.ogg-3ee29708934d330422ea9dbf2d2bb853.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

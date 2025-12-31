@@ -1,0 +1,32 @@
+[gd_scene load_steps=3 format=3 uid="uid://cjs8n8slmm1se"]
+
+[ext_resource type="Script" uid="uid://cculwp7exvch4" path="res://Ver Prototype/Judgement Error Resources/Evidence/evidence_icon.gd" id="1_qhh7f"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_w6lb3"]
+bg_color = Color(0.24477634, 0.24477643, 0.24477628, 1)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color(0.02297377, 0.17436358, 0.24331379, 1)
+
+[node name="Evidence Icon" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_qhh7f")
+
+[node name="Container" type="PanelContainer" parent="."]
+custom_minimum_size = Vector2(168, 168)
+layout_mode = 0
+offset_right = 168.0
+offset_bottom = 168.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_w6lb3")
+
+[node name="TextureRect" type="TextureRect" parent="Container"]
+layout_mode = 2
+expand_mode = 1
+stretch_mode = 4

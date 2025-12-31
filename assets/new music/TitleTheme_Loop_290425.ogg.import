@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://buunnu3j1ko8h"
+path="res://.godot/imported/TitleTheme_Loop_290425.ogg-8ba1c52362ae51bcf3beea9386668640.oggvorbisstr"
+
+[deps]
+
+source_file="res://assets/new music/TitleTheme_Loop_290425.ogg"
+dest_files=["res://.godot/imported/TitleTheme_Loop_290425.ogg-8ba1c52362ae51bcf3beea9386668640.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

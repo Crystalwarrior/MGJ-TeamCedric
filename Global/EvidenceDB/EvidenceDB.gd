@@ -4,6 +4,7 @@ var _evinceItems : Dictionary[Enums.Evidence, EvidenceItem] = {}
 
 
 func loadData() -> void:
+	return
 	for key in EvidenceData.Data.keys():
 		var data = EvidenceData.Data[key]
 		var evidenceItem := EvidenceItem.new()

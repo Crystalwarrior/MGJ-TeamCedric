@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://qowjp7aam1u"
+path="res://.godot/imported/credits.ogg-181d3e2dcadf58ae614f3f2cb920840a.oggvorbisstr"
+
+[deps]
+
+source_file="res://assets/new music/credits.ogg"
+dest_files=["res://.godot/imported/credits.ogg-181d3e2dcadf58ae614f3f2cb920840a.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

@@ -4,6 +4,8 @@ enum State {
 	Null = -1,
 	Speaking,
 	EvidencePrompt,
+	ProfilePrompt,
+	TestimonyReview
 }
 var _state : State = State.Null
 

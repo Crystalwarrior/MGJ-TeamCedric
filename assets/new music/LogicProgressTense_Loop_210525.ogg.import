@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://b3tkgdacj4hhf"
+path="res://.godot/imported/LogicProgressTense_Loop_210525.ogg-b9cfdfd1442e541d04b84f2e47d366fa.oggvorbisstr"
+
+[deps]
+
+source_file="res://assets/new music/LogicProgressTense_Loop_210525.ogg"
+dest_files=["res://.godot/imported/LogicProgressTense_Loop_210525.ogg-b9cfdfd1442e541d04b84f2e47d366fa.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

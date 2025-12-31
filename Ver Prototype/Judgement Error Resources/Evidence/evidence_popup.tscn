@@ -1,0 +1,115 @@
+[gd_scene load_steps=6 format=3 uid="uid://cfujmnuqis081"]
+
+[ext_resource type="Script" uid="uid://xabseehpa1yn" path="res://Ver Prototype/Judgement Error Resources/Evidence/evidence_popup.gd" id="1_g5ngi"]
+
+[sub_resource type="Animation" id="Animation_g5ngi"]
+resource_name = "Move off Screen"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Box:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.46),
+"transitions": PackedFloat32Array(0.5, 1),
+"update": 0,
+"values": [Vector2(474, 350), Vector2(2006, 350)]
+}
+
+[sub_resource type="Animation" id="Animation_qhjdj"]
+resource_name = "Move onto Screen"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Box:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.23333335),
+"transitions": PackedFloat32Array(0.5, 0.5),
+"update": 0,
+"values": [Vector2(-1073, 350), Vector2(474, 350)]
+}
+
+[sub_resource type="Animation" id="Animation_mf2m4"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Box:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-1073, 350)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_p0u0d"]
+_data = {
+&"Move off Screen": SubResource("Animation_g5ngi"),
+&"Move onto Screen": SubResource("Animation_qhjdj"),
+&"RESET": SubResource("Animation_mf2m4")
+}
+
+[node name="Evidence Popup" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_g5ngi")
+
+[node name="Box" type="ColorRect" parent="."]
+layout_mode = 1
+offset_left = -1073.0
+offset_top = 350.0
+offset_right = -101.0
+offset_bottom = 644.0
+scale = Vector2(1.08, 1)
+color = Color(0.23753911, 0.23753914, 0.23753911, 1)
+
+[node name="Container" type="PanelContainer" parent="Box"]
+layout_mode = 0
+offset_left = 7.0
+offset_top = 6.0
+offset_right = 273.14813
+offset_bottom = 272.14813
+
+[node name="Icon" type="TextureRect" parent="Box/Container"]
+layout_mode = 2
+
+[node name="Name" type="Label" parent="Box"]
+layout_mode = 0
+offset_left = 281.48148
+offset_top = 7.0
+offset_right = 541.037
+offset_bottom = 52.0
+theme_override_font_sizes/font_size = 32
+text = "EVIDENCE NAME"
+
+[node name="MarginContainer" type="MarginContainer" parent="Box"]
+layout_mode = 0
+offset_left = 280.55554
+offset_top = 50.0
+offset_right = 967.5926
+offset_bottom = 163.0
+
+[node name="Description" type="Label" parent="Box/MarginContainer"]
+layout_mode = 2
+size_flags_vertical = 1
+theme_override_font_sizes/font_size = 24
+text = "Brief Evidence Description goes here."
+
+[node name="Button" type="Button" parent="Box"]
+layout_mode = 0
+offset_left = 798.14813
+offset_top = 237.0
+offset_right = 971.14813
+offset_bottom = 290.0
+theme_override_font_sizes/font_size = 32
+text = "CONTINUE"
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_p0u0d")
+}

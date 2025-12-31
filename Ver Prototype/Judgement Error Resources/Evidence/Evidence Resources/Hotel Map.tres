@@ -1,0 +1,18 @@
+[gd_resource type="Resource" script_class="EvidenceClass" load_steps=4 format=3 uid="uid://brrw5ovnukga6"]
+
+[ext_resource type="Texture2D" uid="uid://crocapj4gdlg4" path="res://Ver Prototype/Judgement Error Resources/Evidence/Images/Map.png" id="1_4vud1"]
+[ext_resource type="Script" uid="uid://bfyabthsutkqw" path="res://Ver Prototype/Judgement Error Resources/Evidence/Scripts/evidence_note_resource.gd" id="2_p35or"]
+[ext_resource type="Script" uid="uid://0v6ti71a1700" path="res://Ver Prototype/Judgement Error Resources/Evidence/Scripts/evidence_resource.gd" id="3_11wij"]
+
+[resource]
+script = ExtResource("3_11wij")
+evidence_name = "Hotel Room Map"
+evidence_image = ExtResource("1_4vud1")
+evidence_description = "Each room has two entrances, which auto-lock upon being closed. Both doors were found closed.
+
+Both doors require the associated room key to unlock.
+
+The balcony door can be held open using the ceiling latch.
+
+Click the icon on the bottom left to zoom in."
+metadata/_custom_type_script = "uid://0v6ti71a1700"

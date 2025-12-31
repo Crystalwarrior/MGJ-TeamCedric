@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://cmvg6thxft6qr"
+path="res://.godot/imported/logic_beginning.ogg-60df73f3fb8442c8c85445dd0340f4c9.oggvorbisstr"
+
+[deps]
+
+source_file="res://assets/placeholder music/logic_beginning.ogg"
+dest_files=["res://.godot/imported/logic_beginning.ogg-60df73f3fb8442c8c85445dd0340f4c9.oggvorbisstr"]
+
+[params]
+
+loop=true
+loop_offset=0.0
+bpm=0.0
+beat_count=0
+bar_beats=4

@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=15
+type="Resource"
+uid="uid://cvcch7edwt8dy"
+path="res://.godot/imported/Hart and Alma introduction.dialogue-c1155ba456849e90c89576ebc76508e6.tres"
+
+[deps]
+
+source_file="res://Data/Dialogue/Hart and Alma introduction.dialogue"
+dest_files=["res://.godot/imported/Hart and Alma introduction.dialogue-c1155ba456849e90c89576ebc76508e6.tres"]
+
+[params]
+
+defaults=true

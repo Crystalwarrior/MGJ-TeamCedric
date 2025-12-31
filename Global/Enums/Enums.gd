@@ -2,6 +2,10 @@ extends Node
 
 enum Evidence {
 	Null = -1,
-	Knife,
-	Amnesia,
+	Package,
+	Tape,
+	Fancy_Necklace,
+	Autopsy_Report,
+	Streamer_Photo,
+	Hotel_Room
 }

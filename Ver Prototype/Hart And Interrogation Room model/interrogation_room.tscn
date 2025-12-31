@@ -1,0 +1,41 @@
+[gd_scene load_steps=4 format=3 uid="uid://cjs2v8hj2a2h6"]
+
+[ext_resource type="PackedScene" uid="uid://ximk25fknt1e" path="res://Ver Prototype/Hart And Interrogation Room model/Models/Hart - Textures 03.fbx" id="1_3r0s4"]
+[ext_resource type="PackedScene" uid="uid://dyk87owvx4b4a" path="res://Ver Prototype/Hart And Interrogation Room model/Models/IRoom - Textures 02.fbx" id="2_yo08v"]
+
+[sub_resource type="Environment" id="Environment_3r0s4"]
+background_mode = 1
+background_color = Color(0.007843138, 0, 0, 1)
+background_energy_multiplier = 0.1
+
+[node name="Interrogation Room" type="Node3D"]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_3r0s4")
+
+[node name="Hart - Textures 03" parent="." instance=ExtResource("1_3r0s4")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 1.3795836, 0, 0)
+
+[node name="IRoom - Textures 02" parent="." instance=ExtResource("2_yo08v")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.3353157, 0.018776894, -2.9390855)
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(-4.2477858e-08, -0.23588848, -0.9717802, -1.0311014e-08, 0.9717802, -0.23588848, 1, 1.7763568e-15, -4.371139e-08, -3.9218307, 2.0584452, 0)
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+visible = false
+sky_mode = 2
+
+[node name="OmniLight3D" type="OmniLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.6536794, 4.7412176, 0)
+light_color = Color(0.41279998, 0.72287995, 0.96, 1)
+shadow_enabled = true
+distance_fade_enabled = true
+omni_range = 6.834
+
+[node name="OmniLight3D2" type="OmniLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.7138605, 3.3588905, -0.85309696)
+light_color = Color(0.2526199, 0.40837458, 0.6927978, 1)
+light_energy = 0.3
+distance_fade_enabled = true
+omni_range = 16.109

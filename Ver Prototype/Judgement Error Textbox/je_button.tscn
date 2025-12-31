@@ -1,0 +1,47 @@
+[gd_scene load_steps=2 format=3 uid="uid://j6gxhia6pu0o"]
+
+[ext_resource type="Script" uid="uid://cn5oeqv71ajoo" path="res://Judgement Error Textbox/je_button.gd" id="1_x8f6k"]
+
+[node name="Textbox Button" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("1_x8f6k")
+
+[node name="BG2" type="ColorRect" parent="."]
+layout_mode = 0
+offset_left = 0.12679946
+offset_top = -92.0135
+offset_right = 130.27074
+offset_bottom = 40.23295
+rotation = 0.7853982
+color = Color(0, 0, 0, 1)
+
+[node name="BG" type="ColorRect" parent="."]
+layout_mode = 0
+offset_left = 0.4490738
+offset_top = -89.0
+offset_right = 126.467255
+offset_bottom = 38.914307
+rotation = 0.7853982
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 0
+offset_top = -88.0
+offset_right = 124.93255
+offset_bottom = 39.241577
+rotation = 0.7853982
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_left = -67.77461
+offset_top = -21.776367
+offset_right = 64.462204
+offset_bottom = 24.306152
+theme_override_font_sizes/font_size = 23
+text = "BUTTON"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="EvidenceClass" load_steps=4 format=3 uid="uid://dpw28fg4fu14i"]
+
+[ext_resource type="Texture2D" uid="uid://cq7hr5cky27mb" path="res://Ver Prototype/Judgement Error Resources/Evidence/Images/Tape.png" id="1_7hwn0"]
+[ext_resource type="Script" uid="uid://bfyabthsutkqw" path="res://Ver Prototype/Judgement Error Resources/Evidence/Scripts/evidence_note_resource.gd" id="2_w5ky7"]
+[ext_resource type="Script" uid="uid://0v6ti71a1700" path="res://Ver Prototype/Judgement Error Resources/Evidence/Scripts/evidence_resource.gd" id="3_pwgxv"]
+
+[resource]
+script = ExtResource("3_pwgxv")
+evidence_name = "Tape"
+evidence_image = ExtResource("1_7hwn0")
+evidence_description = "A roll of tape was found on the bed in the victim’s hotel room. Alma’s fingerprints are in."
+metadata/_custom_type_script = "uid://0v6ti71a1700"

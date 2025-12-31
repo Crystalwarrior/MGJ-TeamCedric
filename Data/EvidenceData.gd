@@ -1,14 +1,17 @@
 class_name EvidenceData
 
+#All the evidence data is stored in this script
+#We can load all evidence in here and refer to it in this dictionary.
+#This makes checking evidence against testimony much easier.
+#The same goes with evidence and profile prompts
+
 const Data : Dictionary[Enums.Evidence, Dictionary] = {
-	Enums.Evidence.Knife: {
-		"icon": "res://icon.svg",
-		"title": "Bloody Knife",
-		"description": "A knife stained with blood. The AI says it has my fingerprints..."
+	Enums.Evidence.Package: {
+		"name" : "Package",
+		"resource" : "uid://wq6550fc4ev4"
 	},
-	Enums.Evidence.Amnesia: {
-		"icon": "res://icon.svg",
-		"title": "Amnesia",
-		"description": "I cant seems to recall anything... there must be a reason..."
+	Enums.Evidence.Tape: {
+		"name" : "Tape",
+		"resource" : ""
 	},
 }

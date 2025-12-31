@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://do0rdwifh8wq1"
+path="res://.godot/imported/mystery.ogg-1a6fa42e6afb3426aa7aefbfc9a8d77d.oggvorbisstr"
+
+[deps]
+
+source_file="res://assets/placeholder music/mystery.ogg"
+dest_files=["res://.godot/imported/mystery.ogg-1a6fa42e6afb3426aa7aefbfc9a8d77d.oggvorbisstr"]
+
+[params]
+
+loop=true
+loop_offset=0.0
+bpm=0.0
+beat_count=0
+bar_beats=4

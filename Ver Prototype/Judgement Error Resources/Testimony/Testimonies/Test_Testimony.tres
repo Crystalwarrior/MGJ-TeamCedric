@@ -1,0 +1,32 @@
+[gd_resource type="Resource" script_class="TestimonyClass" load_steps=8 format=3 uid="uid://bt3evuu1kixkt"]
+
+[ext_resource type="Script" uid="uid://cuelwrh7fhq0f" path="res://Judgement Error Resources/Testimony/testimony_resource.gd" id="1_5y37b"]
+[ext_resource type="Script" uid="uid://bkpe8ikwad83" path="res://Judgement Error Resources/Testimony/testimony_statements_resource.gd" id="2_rr0kv"]
+
+[sub_resource type="Resource" id="Resource_5y37b"]
+script = ExtResource("2_rr0kv")
+statement = "Look, you have to check this out."
+metadata/_custom_type_script = "uid://bkpe8ikwad83"
+
+[sub_resource type="Resource" id="Resource_rr0kv"]
+script = ExtResource("2_rr0kv")
+statement = "Using Godot's exports, I set up an easy method to insert statements"
+metadata/_custom_type_script = "uid://bkpe8ikwad83"
+
+[sub_resource type="Resource" id="Resource_1i67v"]
+script = ExtResource("2_rr0kv")
+metadata/_custom_type_script = "uid://bkpe8ikwad83"
+
+[sub_resource type="Resource" id="Resource_dfple"]
+script = ExtResource("2_rr0kv")
+metadata/_custom_type_script = "uid://bkpe8ikwad83"
+
+[sub_resource type="Resource" id="Resource_4dq48"]
+script = ExtResource("2_rr0kv")
+metadata/_custom_type_script = "uid://bkpe8ikwad83"
+
+[resource]
+script = ExtResource("1_5y37b")
+testimony_title = "Testimony Test"
+statements = Array[ExtResource("2_rr0kv")]([SubResource("Resource_5y37b"), SubResource("Resource_rr0kv"), SubResource("Resource_1i67v"), SubResource("Resource_dfple"), SubResource("Resource_4dq48")])
+metadata/_custom_type_script = "uid://cuelwrh7fhq0f"

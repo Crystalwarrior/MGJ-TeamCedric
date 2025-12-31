@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="EvidenceClass" load_steps=4 format=3 uid="uid://4lqdk2jphuem"]
+
+[ext_resource type="Texture2D" uid="uid://co2jdbsk50c4j" path="res://Ver Prototype/Judgement Error Resources/Evidence/Images/Autopsy Report.png" id="1_d17fr"]
+[ext_resource type="Script" uid="uid://bfyabthsutkqw" path="res://Ver Prototype/Judgement Error Resources/Evidence/Scripts/evidence_note_resource.gd" id="2_bs8a5"]
+[ext_resource type="Script" uid="uid://0v6ti71a1700" path="res://Ver Prototype/Judgement Error Resources/Evidence/Scripts/evidence_resource.gd" id="3_t1yxw"]
+
+[resource]
+script = ExtResource("3_t1yxw")
+evidence_name = "Autopsy Report"
+evidence_image = ExtResource("1_d17fr")
+evidence_description = "ToD: 2 PM to 4 PM
+Cause of Death: Asphyxiation
+Markings were found around the victim's neck. The victim had their phone and room key.
+"
+metadata/_custom_type_script = "uid://0v6ti71a1700"

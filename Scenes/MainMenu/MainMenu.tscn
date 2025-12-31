@@ -1,8 +1,8 @@
-[gd_scene load_steps=10 format=3 uid="uid://dg0io0m1wcmd7"]
+[gd_scene load_steps=12 format=3 uid="uid://dg0io0m1wcmd7"]
 
 [ext_resource type="Theme" uid="uid://dhvsei0a7jp3j" path="res://GlobalTheme.tres" id="1_enjhb"]
 [ext_resource type="Script" uid="uid://lh6xedgmm6cc" path="res://Scenes/MainMenu/MainMenu.gd" id="2_wgsk1"]
-[ext_resource type="Texture2D" uid="uid://vvhcuvpe7gwe" path="res://assets/images/interface/postcard.png" id="3_17k7v"]
+[ext_resource type="Texture2D" uid="uid://bs8w6pvwgrd8p" path="res://Ver Prototype/Judgement Error logo.png" id="3_kpx3y"]
 [ext_resource type="FontFile" uid="uid://d05yajp3iubii" path="res://assets/fonts/SpaceGrotesk-Bold.ttf" id="4_kpx3y"]
 
 [sub_resource type="Animation" id="Animation_rhvpn"]
@@ -91,6 +91,13 @@ _data = {
 &"start": SubResource("Animation_24hy8")
 }
 
+[sub_resource type="Gradient" id="Gradient_ua038"]
+colors = PackedColorArray(2.256129e-08, 0.03626563, 0.08283088, 1, 0.65999997, 1, 1, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_vapy7"]
+gradient = SubResource("Gradient_ua038")
+fill_from = Vector2(1, 1)
+
 [sub_resource type="InputEventAction" id="InputEventAction_dwmcf"]
 action = &"ui_accept"
 
@@ -124,6 +131,15 @@ grow_vertical = 2
 mouse_filter = 1
 color = Color(0, 0, 0, 0.752941)
 
+[node name="BG" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = SubResource("GradientTexture2D_vapy7")
+
 [node name="CardControl" type="Control" parent="."]
 layout_mode = 1
 anchors_preset = 15
@@ -132,48 +148,54 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
+[node name="Logo" type="TextureRect" parent="CardControl"]
+layout_mode = 0
+offset_left = 463.0
+offset_top = 10.0
+offset_right = 1463.0
+offset_bottom = 1010.0
+texture = ExtResource("3_kpx3y")
+
 [node name="Card" type="TextureRect" parent="CardControl"]
 layout_mode = 0
 offset_left = 131.0
-offset_top = 109.0
+offset_top = 188.0
 offset_right = 1780.0
-offset_bottom = 973.0
-texture = ExtResource("3_17k7v")
+offset_bottom = 1052.0
 expand_mode = 1
 stretch_mode = 5
 
 [node name="Title" type="Label" parent="CardControl/Card"]
-modulate = Color(0.217701, 0.217701, 0.217701, 1)
 layout_mode = 0
 offset_left = 181.0
-offset_top = 102.0
+offset_top = 145.0
 offset_right = 1480.0
-offset_bottom = 337.0
+offset_bottom = 380.0
 theme = ExtResource("1_enjhb")
+theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_fonts/font = ExtResource("4_kpx3y")
 theme_override_font_sizes/font_size = 80
-text = "Godot 4.4
-gamejam template"
+text = "JUDGEMENT ERROR"
 horizontal_alignment = 1
 
 [node name="ExtraText" type="Label" parent="CardControl/Card"]
 layout_mode = 0
 offset_left = 7.0
-offset_top = 345.0
+offset_top = 238.0
 offset_right = 1648.0
-offset_bottom = 451.0
+offset_bottom = 344.0
 theme = ExtResource("1_enjhb")
+theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_font_sizes/font_size = 36
-text = "to start your projects just a little faster
-+ some extra homebrew utilities"
+text = "Delivery Not Found"
 horizontal_alignment = 1
 
 [node name="StartButton" type="Button" parent="CardControl/Card"]
 layout_mode = 0
 offset_left = 643.0
-offset_top = 691.0
+offset_top = 429.0
 offset_right = 1009.0
-offset_bottom = 787.0
+offset_bottom = 525.0
 mouse_default_cursor_shape = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 48
@@ -182,6 +204,7 @@ shortcut_in_tooltip = false
 text = "Start"
 
 [node name="LinkButton" type="LinkButton" parent="CardControl/Card"]
+visible = false
 layout_mode = 0
 offset_left = 641.0
 offset_top = 523.0

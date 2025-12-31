@@ -1,0 +1,133 @@
+[gd_scene load_steps=5 format=3 uid="uid://ci7a1ihfpajqq"]
+
+[ext_resource type="Texture2D" uid="uid://cy6obc7mvynv4" path="res://Ver Prototype/Judgement Error Textbox/Textbox MockUp Transparent.png" id="1_uq06a"]
+[ext_resource type="PackedScene" uid="uid://j6gxhia6pu0o" path="res://Ver Prototype/Judgement Error Textbox/je_button.tscn" id="2_1u88d"]
+[ext_resource type="Texture2D" uid="uid://tmqt1xpqm468" path="res://Ver Prototype/Judgement Error Textbox/Textbox Decoration.png" id="2_vecy2"]
+[ext_resource type="PackedScene" uid="uid://cab50sy3j54jf" path="res://Ver Prototype/Judgement Error Testimony Review/Statement Tracker.tscn" id="4_vecy2"]
+
+[node name="Textbox" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TextboxMockUpTransparent" type="Sprite2D" parent="."]
+visible = false
+texture = ExtResource("1_uq06a")
+centered = false
+
+[node name="NameTag" type="ColorRect" parent="."]
+layout_mode = 0
+offset_top = 715.0
+offset_right = 613.0
+offset_bottom = 807.0
+color = Color(0.13333334, 0.18039216, 0.2784314, 1)
+
+[node name="ColorRect" type="ColorRect" parent="NameTag"]
+layout_mode = 0
+offset_left = 613.0
+offset_right = 759.0
+offset_bottom = 146.0
+rotation = 0.7853982
+color = Color(0.13333334, 0.18039216, 0.2784314, 1)
+
+[node name="MarginContainer" type="MarginContainer" parent="NameTag"]
+layout_mode = 0
+offset_left = 301.0
+offset_right = 613.0
+offset_bottom = 88.0
+
+[node name="Label" type="Label" parent="NameTag/MarginContainer"]
+visible = false
+layout_mode = 2
+theme_override_constants/outline_size = 16
+theme_override_font_sizes/font_size = 44
+text = "BUSINESSMAN"
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 0
+offset_top = 807.0
+offset_right = 1920.0
+offset_bottom = 987.0
+color = Color(0, 0, 0, 1)
+
+[node name="MarginContainer" type="MarginContainer" parent="ColorRect"]
+layout_mode = 0
+offset_left = 301.0
+offset_right = 1647.0
+offset_bottom = 180.0
+
+[node name="TextboxDecoration" type="Sprite2D" parent="."]
+texture = ExtResource("2_vecy2")
+centered = false
+
+[node name="History Button" parent="." instance=ExtResource("2_1u88d")]
+layout_mode = 0
+offset_left = 94.0
+offset_top = 805.0
+offset_right = 134.0
+offset_bottom = 845.0
+label_text = "HISTORY"
+
+[node name="Skip Button" parent="." instance=ExtResource("2_1u88d")]
+layout_mode = 0
+offset_left = 184.0
+offset_top = 896.0
+offset_right = 224.0
+offset_bottom = 936.0
+label_text = "SKIP"
+
+[node name="Save & Load Button" parent="." instance=ExtResource("2_1u88d")]
+layout_mode = 0
+offset_left = 93.0
+offset_top = 988.0
+offset_right = 133.0
+offset_bottom = 1028.0
+label_text = "SAVE/LOAD"
+
+[node name="Evidence Button" parent="." instance=ExtResource("2_1u88d")]
+layout_mode = 0
+offset_left = 1737.0
+offset_top = 804.0
+offset_right = 1777.0
+offset_bottom = 844.0
+label_text = "EVIDENCE"
+
+[node name="Timeline Button" parent="." instance=ExtResource("2_1u88d")]
+layout_mode = 0
+offset_left = 1829.0
+offset_top = 895.0
+offset_right = 1869.0
+offset_bottom = 935.0
+label_text = "TIMELINE"
+
+[node name="Profiles Button" parent="." instance=ExtResource("2_1u88d")]
+layout_mode = 0
+offset_left = 1736.0
+offset_top = 987.0
+offset_right = 1776.0
+offset_bottom = 1027.0
+label_text = "PROFILES"
+
+[node name="Statements" type="HBoxContainer" parent="."]
+visible = false
+layout_mode = 0
+offset_left = 1186.0
+offset_top = 760.0
+offset_right = 1707.0
+offset_bottom = 832.0
+alignment = 2
+
+[node name="Control" parent="Statements" instance=ExtResource("4_vecy2")]
+layout_mode = 2
+
+[node name="Control2" parent="Statements" instance=ExtResource("4_vecy2")]
+layout_mode = 2
+
+[node name="Control3" parent="Statements" instance=ExtResource("4_vecy2")]
+layout_mode = 2
+
+[node name="Control4" parent="Statements" instance=ExtResource("4_vecy2")]
+layout_mode = 2

@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="EvidenceClass" load_steps=4 format=3 uid="uid://wq6550fc4ev4"]
+
+[ext_resource type="Texture2D" uid="uid://cltkrimisorkm" path="res://Ver Prototype/Judgement Error Resources/Evidence/Images/Package.png" id="1_a0f27"]
+[ext_resource type="Script" uid="uid://bfyabthsutkqw" path="res://Ver Prototype/Judgement Error Resources/Evidence/Scripts/evidence_note_resource.gd" id="1_rivfk"]
+[ext_resource type="Script" uid="uid://0v6ti71a1700" path="res://Ver Prototype/Judgement Error Resources/Evidence/Scripts/evidence_resource.gd" id="2_3jyv5"]
+
+[resource]
+script = ExtResource("2_3jyv5")
+evidence_name = "Package"
+evidence_image = ExtResource("1_a0f27")
+evidence_description = "Belongs to X delivery company.
+It's sealed and addressed to the victim.
+Found at the crime scene on the victim's bed
+
+It has Alma's fingerprints on it.
+"
+metadata/_custom_type_script = "uid://0v6ti71a1700"

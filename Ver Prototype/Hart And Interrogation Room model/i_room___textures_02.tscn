@@ -1,0 +1,25 @@
+[gd_scene load_steps=8 format=3 uid="uid://c1cyhd67h18bl"]
+
+[ext_resource type="PackedScene" uid="uid://dyk87owvx4b4a" path="res://Hart And Interrogation Room model/Models/IRoom - Textures 02.fbx" id="1_3v3og"]
+[ext_resource type="Texture2D" uid="uid://1dtjrioj0c03" path="res://Hart And Interrogation Room model/Textures/textures/Gray Metal -2/Gray Metal.002_BaseColor.png" id="2_7tc8u"]
+[ext_resource type="Texture2D" uid="uid://w1ciy2ihf0cn" path="res://Hart And Interrogation Room model/Textures/textures/Gray Metal -2/Gray Metal.002_Metallic.png" id="3_6s14g"]
+[ext_resource type="Texture2D" uid="uid://e1a1xhjaxmu" path="res://Hart And Interrogation Room model/Textures/textures/Gray Metal -2/Gray Metal.002_Normal.png" id="4_xesyc"]
+[ext_resource type="Texture2D" uid="uid://nxgaka71wnyy" path="res://Hart And Interrogation Room model/Textures/textures/Gray Metal -2/Gray Metal.002_Roughness.png" id="5_272be"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_7tc8u"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_cjsy4"]
+albedo_texture = ExtResource("2_7tc8u")
+metallic = 1.0
+metallic_texture = ExtResource("3_6s14g")
+roughness_texture = ExtResource("5_272be")
+normal_enabled = true
+normal_texture = ExtResource("4_xesyc")
+
+[node name="IRoom - Textures 02" instance=ExtResource("1_3v3og")]
+
+[node name="Chair" parent="." index="14"]
+surface_material_override/0 = SubResource("StandardMaterial3D_7tc8u")
+
+[node name="Wall - Alcove Back" parent="." index="38"]
+surface_material_override/0 = SubResource("StandardMaterial3D_cjsy4")

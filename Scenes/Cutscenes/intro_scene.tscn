@@ -1,0 +1,24 @@
+[gd_scene load_steps=4 format=3 uid="uid://nipmvenkhlfy"]
+
+[ext_resource type="Script" uid="uid://dqk4npax2osfr" path="res://Scenes/Cutscenes/intro_scene.gd" id="1_h78em"]
+[ext_resource type="Resource" uid="uid://drgs0mtes10ty" path="res://Data/Dialogue/New Intro.dialogue" id="2_h78em"]
+[ext_resource type="PackedScene" uid="uid://mfaag4dkpa2x" path="res://Scenes/UI/MainUI.tscn" id="3_6tedn"]
+
+[node name="Intro Scene" type="Node"]
+script = ExtResource("1_h78em")
+_introDialogue = ExtResource("2_h78em")
+
+[node name="UI" type="CanvasLayer" parent="."]
+
+[node name="DialogueContainer" type="Control" parent="UI"]
+unique_name_in_owner = true
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="MainUI" parent="UI" instance=ExtResource("3_6tedn")]
+unique_name_in_owner = true

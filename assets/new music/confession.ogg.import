@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://2csqyo1s61ne"
+path="res://.godot/imported/confession.ogg-0688cd01a922131b293e60cb18f4ccc4.oggvorbisstr"
+
+[deps]
+
+source_file="res://assets/new music/confession.ogg"
+dest_files=["res://.godot/imported/confession.ogg-0688cd01a922131b293e60cb18f4ccc4.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

@@ -18,10 +18,12 @@ func _ready() -> void:
 		_runTestMode()
 	
 	# Here for quicker testing at the moment
-	var evidence1 = EvidenceDB.getItem(Enums.Evidence.Knife)
-	var evidence2 = EvidenceDB.getItem(Enums.Evidence.Amnesia)
-	_playerState.addEvidence(evidence1)
-	_playerState.addEvidence(evidence2)
+	#var evidence1 = EvidenceDB.getItem(Enums.Evidence.Knife)
+	#var evidence2 = EvidenceDB.getItem(Enums.Evidence.Amnesia)
+	#_playerState.addEvidence(evidence1)
+	#_playerState.addEvidence(evidence2)
+	
+	_mainUI.speakButtonPressed.emit()
 
 func _enter_tree() -> void:
 	_is_test = DMSettings.get_user_value("is_running_test_scene", false)

@@ -113,7 +113,7 @@ locale/translation_remaps={
 "res://images/LOGO 0.png": PackedStringArray("res://images/LOGO - RU.png:ru"),
 "res://images/LOGO MAIN MENU 0.png": PackedStringArray("res://images/LOGO MAIN MENU - RU.png:ru")
 }
-locale/translations_pot_files=PackedStringArray("res://Data/Dialogue/intro.dialogue")
+locale/translations_pot_files=PackedStringArray("res://Data/Dialogue/intro.dialogue", "res://Data/Dialogue/New Intro.dialogue", "res://Data/Dialogue/Hart and Alma introduction.dialogue")
 
 [rendering]
 

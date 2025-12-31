@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="EvidenceClass" load_steps=4 format=3 uid="uid://3u4rlvtqbeuw"]
+
+[ext_resource type="Texture2D" uid="uid://bngvyihsdcda2" path="res://Ver Prototype/Judgement Error Resources/Evidence/Images/Necklace_-_JE.png" id="1_0rjbt"]
+[ext_resource type="Script" uid="uid://bfyabthsutkqw" path="res://Ver Prototype/Judgement Error Resources/Evidence/Scripts/evidence_note_resource.gd" id="2_wdrol"]
+[ext_resource type="Script" uid="uid://0v6ti71a1700" path="res://Ver Prototype/Judgement Error Resources/Evidence/Scripts/evidence_resource.gd" id="3_wvrj8"]
+
+[resource]
+script = ExtResource("3_wvrj8")
+evidence_name = "Fancy Necklace"
+evidence_image = ExtResource("1_0rjbt")
+evidence_description = "Found inside the package. It has Alma's fingerprints on it."
+metadata/_custom_type_script = "uid://0v6ti71a1700"

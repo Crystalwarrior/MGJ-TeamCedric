@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://btbkessysnpib"
+path="res://.godot/imported/Eerie.ogg-411fe8c31ae4e42e56968d6213529fa8.oggvorbisstr"
+
+[deps]
+
+source_file="res://assets/new music/Eerie.ogg"
+dest_files=["res://.godot/imported/Eerie.ogg-411fe8c31ae4e42e56968d6213529fa8.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

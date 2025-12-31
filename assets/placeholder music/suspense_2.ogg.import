@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://bykwnmwqy8q2j"
+path="res://.godot/imported/suspense_2.ogg-7d76f04f59a29909463100e441d60924.oggvorbisstr"
+
+[deps]
+
+source_file="res://assets/placeholder music/suspense_2.ogg"
+dest_files=["res://.godot/imported/suspense_2.ogg-7d76f04f59a29909463100e441d60924.oggvorbisstr"]
+
+[params]
+
+loop=true
+loop_offset=0.0
+bpm=0.0
+beat_count=0
+bar_beats=4

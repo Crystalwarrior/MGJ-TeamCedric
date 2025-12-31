@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="EvidenceClass" load_steps=4 format=3 uid="uid://cq04hsb68c2ud"]
+
+[ext_resource type="Texture2D" uid="uid://dobrfrybsfisd" path="res://Ver Prototype/Judgement Error Resources/Evidence/Images/Streamer Photo.png" id="1_y4mj6"]
+[ext_resource type="Script" uid="uid://bfyabthsutkqw" path="res://Ver Prototype/Judgement Error Resources/Evidence/Scripts/evidence_note_resource.gd" id="2_wenn4"]
+[ext_resource type="Script" uid="uid://0v6ti71a1700" path="res://Ver Prototype/Judgement Error Resources/Evidence/Scripts/evidence_resource.gd" id="3_v35ti"]
+
+[resource]
+script = ExtResource("3_v35ti")
+evidence_name = "Streamer's Photo"
+evidence_image = ExtResource("1_y4mj6")
+evidence_description = "Shows Alma crouching. She is obstructing the view of the victim, and it’s hard to tell what her hands are doing. Her head is clean.
+
+The victim’s prosethetic arm is visible.
+According to the file, it was taken at 2:15PM.
+"
+metadata/_custom_type_script = "uid://0v6ti71a1700"

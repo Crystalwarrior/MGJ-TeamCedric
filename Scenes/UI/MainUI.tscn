@@ -99,6 +99,7 @@ theme_override_constants/margin_bottom = 20
 layout_mode = 2
 
 [node name="OpenSlideButton" type="Button" parent="."]
+visible = false
 custom_minimum_size = Vector2(200, 0)
 layout_mode = 0
 offset_left = 110.0
@@ -109,6 +110,7 @@ text = "Open"
 
 [node name="SpeakButton" type="Button" parent="."]
 unique_name_in_owner = true
+visible = false
 layout_mode = 0
 offset_left = 23.0
 offset_top = 140.0
